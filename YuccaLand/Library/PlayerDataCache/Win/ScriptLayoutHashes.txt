@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/David/Projects/YuccaLand/Game (EXE here)/GreatRush.exe
+E:/Projects/Great Rush (EXE)/GreatRush.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/tutorial.unity

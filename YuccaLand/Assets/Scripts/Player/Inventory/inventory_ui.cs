@@ -29,9 +29,11 @@ public class inventory_ui : MonoBehaviour {
 	Animator animator_ranged;
 	SpriteRenderer renderer_ranged;
 
+	int crafting_slot_selected= -1;
+
 	void Start () {
-		selected_color = new Vector4 (0f , 255f, 0f, 255f);//Green
-		crafting_color = new Vector4 (0f , 255f, 255f, 255f);//Cyan
+		selected_color = new Vector4 (0f , 1f, 0f, 1f);//Green
+		crafting_color = new Vector4 (0f , 1f, 1f, 1f);//Cyan
 
 		Inventory = inventory.instance;
 
@@ -191,6 +193,11 @@ public class inventory_ui : MonoBehaviour {
 
 
 	void paint_slot( Color color ) {
+
+		if (selected_slot == crafting_slot_selected) {
+			return;
+		}
+
 		switch (selected_slot) {
 		case 10:
 			melee_slot_ui.GetComponent<Image> ().color = color;
@@ -215,6 +222,44 @@ public class inventory_ui : MonoBehaviour {
 		if (interactive_open) {
 			interactive_open = true;
 			open_close_inventory ();
+		} else {
+			//crafting
+			if (crafting_slot_selected < 0) {
+				//First item
+				switch (selected_slot) {
+				case 10:
+					if (Inventory.melee_weapon != null) {
+						crafting_slot_selected = selected_slot;
+						melee_slot_ui.GetComponent<Image>().color = crafting_color;
+					}
+					break;
+				case 11:
+					if (Inventory.ranged_weapon != null) {
+						crafting_slot_selected = selected_slot;
+						ranged_slot_ui.GetComponent<Image>().color = crafting_color;
+					}
+					break;
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+					if (Inventory.items.Count > selected_slot) {
+						crafting_slot_selected = selected_slot;
+						slots [crafting_slot_selected].GetComponent<Image> ().color = crafting_color;
+					}
+					break;
+				}
+
+
+			} else {
+				//Second item
+			}
 		}
 	}
 

@@ -1,2 +1,11 @@
-This is readme for testing
-This is stable readme
+Additions:
+
+
+Fixes:
+
+
+Known bugs:
+- When Resolution ratio is too wide, main menu background will not be cover whole screen
+
+Planned:
+
