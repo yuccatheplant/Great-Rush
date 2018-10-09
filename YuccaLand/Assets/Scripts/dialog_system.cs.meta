@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ecd93b81b7816d4fb6e06c87f047d5b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player_neutral: {instanceID: 0}
+  - player_happy: {instanceID: 0}
+  - player_angry: {instanceID: 0}
+  - player_sad: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
