@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Combine
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  ID: 0
+  ID: 1002
   inspect_text: This object may be used for a test for combining items.
   inspect_time: 4

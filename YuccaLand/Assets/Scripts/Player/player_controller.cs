@@ -280,7 +280,7 @@ public class player_controller : MonoBehaviour {
 					//return;
 				}
 				if (is_pressed (settings.cont_secaction, float_mouse_wheel, true)) {
-					inventory_setter.select_drop_slot ();
+					inventory_setter.select_secondary_action ();
 					return;
 				}
 				if (is_pressed (settings.cont_action, float_mouse_wheel, true)) {

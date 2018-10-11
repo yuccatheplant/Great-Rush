@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1304
     height: 675
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 7003
+  controlID: 2942
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1007
     height: 675
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 7004
+  controlID: 2924
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1007
     height: 397
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 7005
+  controlID: 2925
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,9 +368,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 78640000
-    m_LastClickedID: 25720
-    m_ExpandedIDs: 8ee5ffff08e6ffff4ce7ffff66e7ffffe6fbffff00000000
+    m_SelectedIDs: c4050000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -425,9 +425,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.590741, y: -10.110177, z: 0.6953125}
+    m_Target: {x: -3.058242, y: -11.5244465, z: 0.84231406}
     speed: 2
-    m_Value: {x: 2.590741, y: -10.110177, z: 0.6953125}
+    m_Value: {x: -3.058242, y: -11.5244465, z: 0.84231406}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -459,9 +459,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.039039
+    m_Target: 3.3389008
     speed: 2
-    m_Value: 11.039039
+    m_Value: 3.3389008
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -535,19 +535,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player/Inventory
+    - Assets/Scripts/Tutorial/triggers
   m_ViewMode: 1
   m_StartGridSize: 61
   m_LastFolders:
-  - Assets/Scripts/Player/Inventory
+  - Assets/Scripts/Tutorial/triggers
   m_LastFoldersGridSize: 61
   m_LastProjectPath: E:\Projects\Great-Rush\YuccaLand
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: 000d0000
-    m_LastClickedID: 3328
+    scrollPos: {x: 0, y: 304}
+    m_SelectedIDs: e4090000
+    m_LastClickedID: 2532
     m_ExpandedIDs: 00000000940900003e0a00005a0a00006c0a0000900a0000c20a0000840b0000920b0000a40b0000b40b0000b80b0000a80c0000ac0c0000f60c0000000d00005a0d0000000e0000080e00005e0e0000880e0000a00e0000a60e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0

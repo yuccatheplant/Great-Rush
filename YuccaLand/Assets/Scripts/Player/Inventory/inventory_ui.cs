@@ -217,6 +217,36 @@ public class inventory_ui : MonoBehaviour {
 		}
 	} 
 
+	public void select_secondary_action () {
+		if (interactive_open) {
+			return;
+		} else if (crafting_slot_selected < 0) {
+			open_close_inventory ();
+		} else {
+			reset_colors ();
+		}
+	}
+
+	void reset_colors() {
+		for (int i = 0; i < 10; i++) {
+			crafting_slot_selected = -1;
+			slots [i].GetComponent<Image> ().color = default_color;
+			melee_slot_ui.GetComponent<Image>().color = default_color;
+			ranged_slot_ui.GetComponent<Image>().color = default_color;
+		}
+
+		switch (selected_slot) {
+		case 10: 
+			melee_slot_ui.GetComponent<Image>().color = selected_color;
+			break;
+		case 11:
+			ranged_slot_ui.GetComponent<Image>().color = selected_color;
+			break;
+		default: 
+			slots [selected_slot].GetComponent<Image> ().color = selected_color;
+			break;
+		} 
+	}
 
 	public void select_action () {
 		if (interactive_open) {
@@ -255,12 +285,16 @@ public class inventory_ui : MonoBehaviour {
 					}
 					break;
 				}
-
-
 			} else {
 				//Second item
+				get_crafting_positions(crafting_slot_selected, selected_slot);
 			}
 		}
+	}
+
+	void get_crafting_positions (int slot1, int slot2) {
+		reset_colors ();
+		Inventory.parse_crafting (slot1, slot2);
 	}
 
 

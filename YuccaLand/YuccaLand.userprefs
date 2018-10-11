@@ -1,19 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\Inventory\crafting_tables.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\Inventory\weapon_picker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\Item.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\Weapon.cs" Line="21" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_weapon_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="22" Column="25" />
-      <File FileName="Assets\Scripts\camera_controler.cs" Line="36" Column="13" />
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="730" Column="20" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="958" Column="3" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="297" Column="27" />
+      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="283" Column="46" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="151" Column="15" />
+      <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="33" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -904,6 +904,7 @@ GameObject:
   - component: {fileID: 284589976}
   - component: {fileID: 284589977}
   - component: {fileID: 284589979}
+  - component: {fileID: 284589981}
   - component: {fileID: 284589974}
   - component: {fileID: 284589978}
   - component: {fileID: 284589980}
@@ -1095,6 +1096,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0.15
+--- !u!114 &284589981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284589972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f3ef6c950aef943be3a55e81e23312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318410005
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,9 +3063,9 @@ MonoBehaviour:
   gate_t_unlocked: 0
   gate_t_beenopened: 0
   gate_t_openned: 0
-  pine01_t_unlocked: 0
+  pine01_t_unlocked: 1
   pine01_t_interactiondone: 0
-  fence_t_unlocked: 0
+  fence_t_unlocked: 1
   fence_t_repaired: 0
 --- !u!1 &901397490
 GameObject:

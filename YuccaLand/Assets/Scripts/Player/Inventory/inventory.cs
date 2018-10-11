@@ -20,7 +20,7 @@ public class inventory : MonoBehaviour {
 	inventory_slot_weapon_ui melee_slot;
 	inventory_slot_weapon_ui ranged_slot;
 
-
+	crafting_tables crafting;
 
 
 	void Awake () {
@@ -36,7 +36,7 @@ public class inventory : MonoBehaviour {
 		melee_slot = GameObject.Find ("melee_slot").GetComponent<inventory_slot_weapon_ui> ();
 		ranged_slot = GameObject.Find ("ranged_slot").GetComponent<inventory_slot_weapon_ui> ();
 
-
+		crafting = gameObject.GetComponent<crafting_tables> ();
 	}
 
 	public void weapon_add ( Weapon new_weapon ) {
@@ -112,5 +112,46 @@ public class inventory : MonoBehaviour {
 		}
 	}
 
+	public void parse_crafting ( int slot1, int slot2 ) {
+		int id1 = -1;
+		int id2 = -1;
+
+		switch (slot1) {
+		case 10:
+			id1 = melee_weapon.ID;
+			break;
+		case 11:
+			id1 = ranged_weapon.ID;
+				break;
+		default:
+			id1 = items[slot1].ID;
+			break;
+		}
+
+		switch (slot2) {
+		case 10:
+			id2 = melee_weapon.ID;
+			break;
+		case 11:
+			id2 = ranged_weapon.ID;
+				break;
+		default:
+			id2 = items[slot2].ID;
+			break;
+		}
+
+		if (id1 < 0 || id2 < 0) {
+			return;
+		}
+
+		int result = 0;
+		if (id1 > id2) {
+			int swap = id1;
+			id1 = id2;
+			id2 = swap;
+		} 
+
+		result = crafting.find_recipe (id1, id2);
+	}
 
 }
