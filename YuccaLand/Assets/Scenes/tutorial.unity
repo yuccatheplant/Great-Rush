@@ -3063,9 +3063,9 @@ MonoBehaviour:
   gate_t_unlocked: 0
   gate_t_beenopened: 0
   gate_t_openned: 0
-  pine01_t_unlocked: 1
+  pine01_t_unlocked: 0
   pine01_t_interactiondone: 0
-  fence_t_unlocked: 1
+  fence_t_unlocked: 0
   fence_t_repaired: 0
 --- !u!1 &901397490
 GameObject:
