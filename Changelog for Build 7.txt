@@ -5,7 +5,7 @@ Fixes:
 
 
 Known bugs:
-- When Resolution ratio is too wide, main menu background will not be cover whole screen
+- When Resolution ratio is too wide, main menu background will not cover whole screen
 
 Planned:
 

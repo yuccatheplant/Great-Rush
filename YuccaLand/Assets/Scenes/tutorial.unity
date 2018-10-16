@@ -1107,6 +1107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f3ef6c950aef943be3a55e81e23312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crafted_items:
+  - {fileID: 11400000, guid: 39e5174af4055884eae86eea0f236f8c, type: 2}
 --- !u!1 &318410005
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,7 +3065,7 @@ MonoBehaviour:
   gate_t_unlocked: 0
   gate_t_beenopened: 0
   gate_t_openned: 0
-  pine01_t_unlocked: 0
+  pine01_t_unlocked: 1
   pine01_t_interactiondone: 0
   fence_t_unlocked: 0
   fence_t_repaired: 0

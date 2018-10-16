@@ -140,18 +140,26 @@ public class inventory : MonoBehaviour {
 			break;
 		}
 
-		if (id1 < 0 || id2 < 0) {
-			return;
+		bool result = false;
+
+		if (id1 >= 0 && id2 >= 0) {
+			
+			
+
+
+			if (id1 > id2) {
+				int swap = slot1;
+				slot1 = slot2;
+				slot2 = swap;
+
+				swap = id1;
+				id1 = id2;
+				id2 = swap;
+			} 
+
+			result = crafting.find_recipe1 (slot1, slot2, id1, id2);
+
 		}
-
-		int result = 0;
-		if (id1 > id2) {
-			int swap = id1;
-			id1 = id2;
-			id2 = swap;
-		} 
-
-		result = crafting.find_recipe (id1, id2);
 	}
 
 }
