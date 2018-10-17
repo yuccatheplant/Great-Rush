@@ -831,8 +831,80 @@ public class cutscene01 : MonoBehaviour {
 		}
 		yield return null;
 
+		said_text = "So can I continue in my journey then?";
+		wanted_time = 2f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		wanted_time = 2.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
 
+			if (settings.cutscene_skip) {
+				break;
+			}
 
+			yield return null;
+		}
+		yield return null;
+
+		said_text = "Not really...";
+		wanted_time = 1f;
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 1.01f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+
+		player_head.SetInteger ("emotion",2);
+
+		yield return null;
+		yield return null;
+		yield return null;
+
+		said_text = "So what is the problem now?!";
+		wanted_time = 2.5f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		wanted_time = 3f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		instructor_move.npc_watch_target = null;
+		instructor_move.standX = 1f;
+		instructor_move.standY = 0f;
+		instructor_move.walkX = 0f;
+		instructor_move.walkY = 0f;
+
+		said_text = "The main problem here is that the log here must be moved away from the way...";
+		wanted_time = 4f;
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 4.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
 
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;

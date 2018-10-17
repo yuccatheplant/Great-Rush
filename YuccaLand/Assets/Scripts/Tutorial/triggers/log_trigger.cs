@@ -15,10 +15,8 @@ public class log_trigger : MonoBehaviour {
 
 	dialog_system dialog;
 
-	gamemanager_tutorial game_manager;
 
 	bool log_interacting = false;
-	int emotion = 0;
 
 	void Start () {
 		player = GameObject.Find ("player");
@@ -28,7 +26,6 @@ public class log_trigger : MonoBehaviour {
 
 		dialog = GameObject.Find ("subtitles_canvas").GetComponent<dialog_system>();
 
-		game_manager = GameObject.Find ("gamemanager_tutorial").GetComponent<gamemanager_tutorial> ();
 
 	}
 

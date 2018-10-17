@@ -63,6 +63,9 @@ public class inventory_ui : MonoBehaviour {
 	}
 
 	public void open_close_inventory () {
+
+		reset_colors ();
+
 		settings.inventory_opened = !settings.inventory_opened;
 		inventory_canvas.enabled = settings.inventory_opened;
 		if (settings.inventory_opened) {
@@ -70,6 +73,7 @@ public class inventory_ui : MonoBehaviour {
 		} else {
 			Time.timeScale = 1;
 		}
+			
 	}
 
 	void update_ui () {
@@ -287,7 +291,39 @@ public class inventory_ui : MonoBehaviour {
 				}
 			} else {
 				//Second item
-				get_crafting_positions(crafting_slot_selected, selected_slot);
+				bool is_ok = false;
+
+				switch (selected_slot) {
+				case 10:
+					if (Inventory.melee_weapon != null) {
+						is_ok = true;
+					}
+					break;
+				case 11:
+					if (Inventory.ranged_weapon != null) {
+						is_ok = true;
+					}
+					break;
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+					if (Inventory.items.Count > selected_slot) {
+						is_ok = true;
+					}
+					break;
+				}
+
+				if (is_ok) {
+					get_crafting_positions(crafting_slot_selected, selected_slot);
+				}
+
 			}
 		}
 	}
@@ -295,6 +331,8 @@ public class inventory_ui : MonoBehaviour {
 	void get_crafting_positions (int slot1, int slot2) {
 		reset_colors ();
 		Inventory.parse_crafting (slot1, slot2);
+
+		open_close_inventory ();
 	}
 
 

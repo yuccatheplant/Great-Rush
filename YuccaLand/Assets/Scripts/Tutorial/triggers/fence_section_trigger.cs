@@ -228,6 +228,7 @@ public class fence_section_trigger : MonoBehaviour {
 
 
 			game_manager.fence_t_repaired = true;
+			game_manager.instructor_trigger_secaction_mode = 6;
 			GameObject.Find ("cutscene_object").GetComponent<cutscene01> ().cutscene5_prepare ();
 		} else if ( got_id >= 1 && got_id <= 500 ) {
 			yield return new WaitForSeconds (0.5f);

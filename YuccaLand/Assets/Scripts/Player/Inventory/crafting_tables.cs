@@ -15,25 +15,22 @@ public class crafting_tables : MonoBehaviour {
 	}
 
 //Function that compares first ID
-	public bool find_recipe1 (int slot1, int slot2, int id1, int id2) {
-		bool result = false;
-
+	public void find_recipe1 (int slot1, int slot2, int id1, int id2) {
+		
 		switch (id1) {
 		case 1: 
-			result = find_recipe2_id_1 (slot1, slot2, id2);
+			find_recipe2_id_1 (slot1, slot2, id2);
 			break;
 		}
-
-		return result;
+			
 	}
 
 //Functions that finds crafting function after combining is done
-	bool find_recipe2_id_1 (int slot1, int slot2, int id2) {
-		bool result = false;
+	void find_recipe2_id_1 (int slot1, int slot2, int id2) {
 
 		switch (id2) {
 		case 1002:
-			result = craft_id1_id1001 (slot2);
+			craft_id1_id1001 (slot2);
 			break;
 		}
 
@@ -41,12 +38,11 @@ public class crafting_tables : MonoBehaviour {
 
 		slot1 = slot2;
 		slot2 = slot1;
-		return result;
 	}
 		
 
 //Functions that contains exact crafting
-	bool craft_id1_id1001(int slot2) {
+	void craft_id1_id1001(int slot2) {
 		Inventory.item_remove (Inventory.items [slot2]);
 
 		if (Inventory.items.Count < Inventory.inventory_space) {
@@ -54,10 +50,8 @@ public class crafting_tables : MonoBehaviour {
 		} else {
 			drop_item (crafted_items [0]);
 		}
-
-		return true;
+			
 	}
-
 
 
 

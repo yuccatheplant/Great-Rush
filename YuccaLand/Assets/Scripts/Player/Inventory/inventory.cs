@@ -139,8 +139,7 @@ public class inventory : MonoBehaviour {
 			id2 = items[slot2].ID;
 			break;
 		}
-
-		bool result = false;
+			
 
 		if (id1 >= 0 && id2 >= 0) {
 			
@@ -157,7 +156,7 @@ public class inventory : MonoBehaviour {
 				id2 = swap;
 			} 
 
-			result = crafting.find_recipe1 (slot1, slot2, id1, id2);
+			crafting.find_recipe1 (slot1, slot2, id1, id2);
 
 		}
 	}
