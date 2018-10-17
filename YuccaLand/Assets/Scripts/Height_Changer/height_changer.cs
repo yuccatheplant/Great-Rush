@@ -11,6 +11,8 @@ public class height_changer : MonoBehaviour {
 	void Start () {
 		render = gameObject.GetComponent<SpriteRenderer> ();
 
+		render.sortingLayerName = "Objects";
+
 		render.sortingOrder = ((Mathf.RoundToInt (gameObject.transform.position.y * 5 )) * -1)  + offset;
 
 		if (is_static) {

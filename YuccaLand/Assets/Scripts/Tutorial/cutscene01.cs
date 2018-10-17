@@ -750,7 +750,94 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 	}
 
+	public void cutscene5_prepare () {
+		if (!game_manager.cutscene05_invoked) {
+			game_manager.cutscene05_invoked = true;
 
+			StartCoroutine ( cutscene5() );
+		}	
+	}
+
+	IEnumerator cutscene5() {
+		while (settings.already_interacting) {
+			yield return null;
+		}
+		settings.already_interacting = true;
+		player.bool_roam_cutscene = true;
+
+		said_text = "So it is done.";
+		float wanted_time = 2f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		wanted_time = 2.5f;
+		float current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		instructor_move.npc_watch_target = player.gameObject;
+
+		said_text = "Alright.";
+		wanted_time = 1.5f;
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 2.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		said_text = "That's it?";
+		wanted_time = 2f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		wanted_time = 2.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		said_text = "I believe so.\nYes.";
+		wanted_time = 2.5f;
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 4f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+
+
+
+		player.bool_roam_cutscene = false;
+		settings.already_interacting = false;
+		yield return null;
+	}
 
 
 }

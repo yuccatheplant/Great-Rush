@@ -6,6 +6,7 @@ public class gamemanager_tutorial : MonoBehaviour {
 	//init for opening cutscene
 	public bool cutscene01_invoked = false;
 	public bool cutscene03_invoked = false;
+	public bool cutscene05_invoked = false;
 
 	//init for instructor talking states
 	public int instructor_trigger_secaction_mode = 0;

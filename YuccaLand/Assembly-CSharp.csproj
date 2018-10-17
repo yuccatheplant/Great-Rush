@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" />
      <Compile Include="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" />
      <Compile Include="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\triggers\log_trigger.cs" />
      <Compile Include="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs" />
  <Reference Include="Unity.2D.PixelPerfect.Editor">
  <HintPath>E:/Projects/Great-Rush/YuccaLand/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>

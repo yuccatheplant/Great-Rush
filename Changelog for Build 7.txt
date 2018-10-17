@@ -1,5 +1,5 @@
 Additions:
-
+-Added ability to combine items together to obtain a different one
 
 Fixes:
 
