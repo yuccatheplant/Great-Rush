@@ -3273,7 +3273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa58f3202f845294cb4da7a45fc6753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene01_invoked: 1
+  cutscene01_invoked: 0
   cutscene03_invoked: 0
   cutscene05_invoked: 0
   instructor_trigger_secaction_mode: 1
@@ -3282,7 +3282,7 @@ MonoBehaviour:
   gate_t_openned: 0
   pine01_t_unlocked: 0
   pine01_t_interactiondone: 0
-  fence_t_unlocked: 1
+  fence_t_unlocked: 0
   fence_t_repaired: 0
 --- !u!1 &901397490
 GameObject:
