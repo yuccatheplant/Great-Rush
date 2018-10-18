@@ -5,7 +5,7 @@ public class hotbar_controler : MonoBehaviour {
 
 	public int current_slot = 0;
 
-	public Weapon hands;
+	Weapon hands;
 
 	inventory Inventory;
 
@@ -24,6 +24,7 @@ public class hotbar_controler : MonoBehaviour {
 		animator_melee = GameObject.Find ("player_melee_slot").GetComponent<Animator> ();
 		animator_ranged = GameObject.Find ("player_ranged_slot").GetComponent<Animator> ();
 
+		hands = Resources.Load<Weapon> ("Inventory/Weapons/_hands");
 
 		Inventory.on_item_changed_call_back += update_hotbar;
 		update_hotbar ();

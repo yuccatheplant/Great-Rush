@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class crafting_tables : MonoBehaviour {
-	public Item[] crafted_items;
-
 	GameObject player;
 	Transform pickables;
 	inventory Inventory;
@@ -46,9 +44,11 @@ public class crafting_tables : MonoBehaviour {
 		Inventory.item_remove (Inventory.items [slot2]);
 
 		if (Inventory.items.Count < Inventory.inventory_space) {
-			Inventory.item_add (crafted_items [0]);
+			//Inventory.item_add (crafted_items [0]);
+			Inventory.item_add ( Resources.Load<Item>("Inventory/Items/Timber") );
 		} else {
-			drop_item (crafted_items [0]);
+			//drop_item (crafted_items [0]);
+			drop_item ( Resources.Load<Item>("Inventory/Items/Timber") );
 		}
 			
 	}

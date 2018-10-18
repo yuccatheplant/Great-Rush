@@ -884,11 +884,10 @@ public class cutscene01 : MonoBehaviour {
 		}
 		yield return null;
 
-		instructor_move.npc_watch_target = null;
-		instructor_move.standX = 1f;
-		instructor_move.standY = 0f;
-		instructor_move.walkX = 0f;
-		instructor_move.walkY = 0f;
+
+		StartCoroutine (instructor_walk_right06 ());
+
+
 
 		said_text = "The main problem here is that the log here must be moved away from the way...";
 		wanted_time = 4f;
@@ -906,10 +905,72 @@ public class cutscene01 : MonoBehaviour {
 		}
 		yield return null;
 
+		said_text = "Let's do this then.";
+		wanted_time = 2f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		wanted_time = 2.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		said_text = "Alright. You can push the log away from the path. Just step close to it and then walk to it to push it away.";
+		wanted_time = 6f;
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 6.5f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		player_head.SetInteger ("emotion",0);
+
+		Destroy ( GameObject.Find("log_stopper") );
+		game_manager.instructor_trigger_secaction_mode = 6;
+
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;
 		yield return null;
 	}
 
+	IEnumerator instructor_walk_right06 () {
+	
+		instructor_move.gameObject.transform.position = new Vector3 (2f, -12f, instructor_move.gameObject.transform.position.z);
+
+		instructor_move.npc_watch_target = null;
+		instructor_move.standX = 1f;
+		instructor_move.standY = 0f;
+		instructor_move.walkX = 1f;
+		instructor_move.walkY = 0f;
+		instructor_move.walking = true;
+
+		while (instructor_move.gameObject.transform.position.x > 5f) {
+			yield return null;
+		}
+
+		instructor_move.npc_watch_target = null;
+		instructor_move.standX = 1f;
+		instructor_move.standY = 0f;
+		instructor_move.walkX = 0f;
+		instructor_move.walkY = 0f;
+		instructor_move.walking = false;
+
+
+		yield return null;
+	}
 
 }

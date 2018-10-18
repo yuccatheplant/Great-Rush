@@ -132,6 +132,9 @@ public class instructor_trigger : MonoBehaviour {
 		case 5:
 			StartCoroutine( instructor_talk_05() );
 			break;
+		case 6:
+			StartCoroutine( instructor_talk_06() );
+			break;
 		}
 			
 	}
@@ -960,6 +963,74 @@ public class instructor_trigger : MonoBehaviour {
 		instructor_controller.npc_watch_target = null;
 		instructor_controller.standX = 0f;
 		instructor_controller.standY = -1f;
+
+		settings.already_interacting = false;
+		player.GetComponent<player_controller> ().bool_cutscene = false;
+		player.GetComponent<player_controller> ().bool_roam_cutscene = false;
+
+		yield return null;
+	}
+
+
+	IEnumerator instructor_talk_06() {
+		if (settings.already_interacting) {
+			yield break;
+		}
+		settings.already_interacting = true;
+
+		player.GetComponent<player_controller> ().bool_cutscene = true;
+		player.GetComponent<player_controller> ().bool_roam_cutscene = true;
+
+		player.GetComponent<player_controller> ().float_movexaxis = 0f;
+		player.GetComponent<player_controller> ().float_moveyaxis = 0f;
+		player.GetComponent<player_controller> ().bool_player_moves = false;
+
+		float wanted_time;
+		float current_time;
+
+
+		said_text = "Can you repeat it for me?";
+		wanted_time = 2f;
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+
+		wanted_time = 2.25f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.GetComponent<Settings>().cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		instructor_controller.npc_watch_target = player;
+
+
+		said_text = "Just walk towards the log to push it away.";
+		wanted_time = 6f;
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		wanted_time = 6.1f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.GetComponent<Settings>().cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+
+
+
+		instructor_controller.npc_watch_target = null;
+		instructor_controller.standX = 1f;
+		instructor_controller.standY = 0f;
 
 		settings.already_interacting = false;
 		player.GetComponent<player_controller> ().bool_cutscene = false;

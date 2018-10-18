@@ -1,19 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\Inventory\inventory_ui.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NPC_movement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="335" Column="27" />
-      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="300" Column="4" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="16" Column="43" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="159" Column="4" />
-      <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="10" Column="22" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="20" Column="2" />
-      <File FileName="Assets\Scripts\Height_Changer\height_changer.cs" Line="14" Column="37" />
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="897" Column="21" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="231" Column="55" />
-      <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="35" Column="42" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Height_Changer\height_changer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="960" Column="3" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="230" Column="41" />
+      <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\hotbar_controler.cs" Line="27" Column="60" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="987" Column="3" />
+      <File FileName="Assets\Scripts\NPC_movement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
