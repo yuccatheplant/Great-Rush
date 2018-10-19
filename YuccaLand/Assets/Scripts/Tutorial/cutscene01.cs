@@ -958,9 +958,7 @@ public class cutscene01 : MonoBehaviour {
 		instructor_move.walkY = 0f;
 		instructor_move.walking = true;
 
-		while (instructor_move.gameObject.transform.position.x > 5f) {
-			yield return null;
-		}
+		yield return new WaitUntil (() => instructor_move.gameObject.transform.position.x >= 5f);
 
 		instructor_move.npc_watch_target = null;
 		instructor_move.standX = 1f;

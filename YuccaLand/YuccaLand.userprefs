@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NPC_movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs">
     <Files>
       <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\player_controller.cs" Line="1" Column="1" />
@@ -10,12 +10,12 @@
       <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Height_Changer\height_changer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="960" Column="3" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="230" Column="41" />
+      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\hotbar_controler.cs" Line="27" Column="60" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="987" Column="3" />
+      <File FileName="Assets\Scripts\Player\Inventory\hotbar_controler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="41" Column="1" />
       <File FileName="Assets\Scripts\NPC_movement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
