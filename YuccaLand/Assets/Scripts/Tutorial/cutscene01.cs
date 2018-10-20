@@ -75,7 +75,6 @@ public class cutscene01 : MonoBehaviour {
 	{
 		main_camera.change_target( GameObject.Find ("cam_tar_01"), 1f, true);
 
-
 		float wanted_time;
 		float current_time;
 
@@ -90,6 +89,7 @@ public class cutscene01 : MonoBehaviour {
 
 		player.bool_cutscene = true;
 		player.bool_roam_cutscene = true;
+		settings.hotbar_hidden = true;
 
 		player.float_standX = 1f;
 		player.float_standY = 0f;
@@ -477,6 +477,8 @@ public class cutscene01 : MonoBehaviour {
 
 		game_manager.instructor_trigger_secaction_mode = 1;
 		player.bool_roam_cutscene = false;
+
+		settings.hotbar_hidden = false;
 	}
 
 
@@ -496,6 +498,7 @@ public class cutscene01 : MonoBehaviour {
 	{
 		settings.already_interacting = true;
 		player.bool_roam_cutscene = true;
+		settings.hotbar_hidden = true;
 
 		float wanted_time;
 		float current_time;
@@ -683,6 +686,7 @@ public class cutscene01 : MonoBehaviour {
 
 		player_head.SetInteger ("emotion",0);
 
+		settings.hotbar_hidden = false;
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;
 
@@ -709,6 +713,7 @@ public class cutscene01 : MonoBehaviour {
 		}
 		settings.already_interacting = true;
 		player.bool_roam_cutscene = true;
+		settings.hotbar_hidden = true;
 
 		said_text = "Well done!";
 		float wanted_time = 1.5f;
@@ -745,6 +750,7 @@ public class cutscene01 : MonoBehaviour {
 		game_manager.fence_t_unlocked = true;
 		game_manager.instructor_trigger_secaction_mode = 5;
 
+		settings.hotbar_hidden = false;
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;
 		yield return null;
@@ -764,6 +770,7 @@ public class cutscene01 : MonoBehaviour {
 		}
 		settings.already_interacting = true;
 		player.bool_roam_cutscene = true;
+		settings.hotbar_hidden = true;
 
 		said_text = "So it is done.";
 		float wanted_time = 2f;
@@ -942,6 +949,7 @@ public class cutscene01 : MonoBehaviour {
 		Destroy ( GameObject.Find("log_stopper") );
 		game_manager.instructor_trigger_secaction_mode = 6;
 
+		settings.hotbar_hidden = false;
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;
 		yield return null;

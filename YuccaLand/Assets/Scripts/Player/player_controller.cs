@@ -13,16 +13,12 @@ public class player_controller : MonoBehaviour {
 	public float float_basic_stand_speed;
 	public float float_basic_crouching_speed;
 
-
 	private Rigidbody2D rigidbody_player;
 	private Animator animator_player;
 	private Animator animator_head;
 	private Animator animator_handR;
 	private Animator animator_handL;
-
-
 	private Animator animator_melee;
-
 	private Animator animator_ranged;
 
 	public float float_movexaxis = 0f;
@@ -58,6 +54,9 @@ public class player_controller : MonoBehaviour {
 	Vector3 v3_weapon_melee;
 	Vector3 v3_weapon_ranged;
 
+	Canvas objective_canvas;
+	Canvas hotbar_canvas;
+
 
 	// Use this for initialization
 	void Start () {
@@ -77,17 +76,27 @@ public class player_controller : MonoBehaviour {
 		inventory_setter = GameObject.Find ("inventory_canvas").GetComponent<inventory_ui> ();
 		hotbar = GameObject.Find ("hotbar_slot").GetComponent<hotbar_controler> ();
 
-		next_blink= Random.Range (3f , 7f);
+		next_blink= Random.Range (3f, 7f);
 
+		objective_canvas = GameObject.Find ("objective_canvas").GetComponent<Canvas> ();
+		hotbar_canvas = GameObject.Find ("hotbar_canvas").GetComponent<Canvas> ();
+
+		StartCoroutine (init_close_objective ());
 	}
+		
 	
 	void Update () {
 		if (settings.game_paused) {
 			return;
 		}
+
+		if (settings.already_interacting || bool_cutscene || settings.inventory_opened) {
+			settings.objective_opened = open_close_objectives (false);
+		}
+
 		float_mouse_wheel = Input.GetAxisRaw ("Mouse ScrollWheel");
 
-		if (settings.inventory_opened == false) {
+		if (!settings.inventory_opened) {
 
 			settings.cutscene_skip = false;
 
@@ -96,10 +105,15 @@ public class player_controller : MonoBehaviour {
 				float_movexaxis = 0f;
 				float_moveyaxis = 0f;
 				bool_player_moves = false;
-
-				//float_move_speed = 3f;
-
 			}
+
+			if (!settings.hotbar_hidden) {
+				hotbar_canvas.enabled = !settings.objective_opened;
+			} else {
+				hotbar_canvas.enabled = false;
+			}
+
+
 			bool_action_pressed = false;
 			bool_secaction_pressed = false;
 
@@ -126,6 +140,9 @@ public class player_controller : MonoBehaviour {
 				}
 
 				if (!bool_cutscene) {
+
+
+
 					if (is_pressed (settings.cont_moveup, float_mouse_wheel, false)) {
 						float_moveyaxis = float_moveyaxis + 1f;
 					}
@@ -157,8 +174,16 @@ public class player_controller : MonoBehaviour {
 						hotbar.update_hotbar ();
 					}
 
+
+
 					if (!bool_roam_cutscene) {
 					
+						if (is_pressed (settings.cont_objective, float_mouse_wheel, true)) {
+							if (!settings.already_interacting) {
+								settings.objective_opened = open_close_objectives (!settings.objective_opened);
+							}
+						}
+
 						if (is_pressed (settings.cont_secaction, float_mouse_wheel, true)) {
 							bool_secaction_pressed = true;
 						}
@@ -290,6 +315,9 @@ public class player_controller : MonoBehaviour {
 
 
 			}
+
+
+
 		}
 
 
@@ -350,4 +378,17 @@ public class player_controller : MonoBehaviour {
 		}
 		return false;
 	}
+
+	IEnumerator init_close_objective () {
+		yield return null;
+		settings.objective_opened = open_close_objectives (false);
+	}
+
+	public bool open_close_objectives (bool enabled) {
+		objective_canvas.enabled = enabled;
+		hotbar_canvas.enabled = !enabled;
+
+		return enabled;
+	}
+
 }

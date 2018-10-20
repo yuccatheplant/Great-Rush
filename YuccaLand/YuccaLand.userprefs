@@ -1,22 +1,24 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\cutscene01.cs">
     <Files>
       <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="110" Column="31" />
       <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Height_Changer\height_changer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="952" Column="34" />
       <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\hotbar_controler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="41" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NPC_movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Settings.cs" Line="47" Column="27" />
+      <File FileName="Assets\Scripts\dialog_system.cs" Line="26" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

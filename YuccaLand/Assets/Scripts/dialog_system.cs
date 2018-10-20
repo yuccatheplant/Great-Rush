@@ -22,6 +22,8 @@ public class dialog_system : MonoBehaviour {
 		person_text = GameObject.Find ("text_person").GetComponent<Text>();
 		say_text = GameObject.Find ("text_say").GetComponent<Text>();
 		person_icon = GameObject.Find ("image_person").GetComponent<Image> ();
+
+		main_bubble.enabled = false;
 	}
 
 

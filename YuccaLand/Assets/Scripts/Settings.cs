@@ -23,6 +23,7 @@ public class Settings : MonoBehaviour {
 	public string cont_selectdoc = "F2";
 	public string cont_selecttribe = "F3";
 
+	public string cont_objective = "O";
 	public string cont_inventory = "E";
 	public string cont_drop = "Q";
 	public string cont_next = "ScrollDown";
@@ -40,8 +41,10 @@ public class Settings : MonoBehaviour {
 
 	public bool game_paused = true;
 	public bool inventory_opened = false;
+	public bool objective_opened = false;
 	public bool cutscene_skip = false;
 	public bool already_interacting = false;
+	public bool hotbar_hidden = false;
 
 
 	void Awake () {
