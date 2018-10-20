@@ -713,7 +713,6 @@ public class cutscene01 : MonoBehaviour {
 		}
 		settings.already_interacting = true;
 		player.bool_roam_cutscene = true;
-		settings.hotbar_hidden = true;
 
 		said_text = "Well done!";
 		float wanted_time = 1.5f;
@@ -750,7 +749,6 @@ public class cutscene01 : MonoBehaviour {
 		game_manager.fence_t_unlocked = true;
 		game_manager.instructor_trigger_secaction_mode = 5;
 
-		settings.hotbar_hidden = false;
 		player.bool_roam_cutscene = false;
 		settings.already_interacting = false;
 		yield return null;
