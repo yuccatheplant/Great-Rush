@@ -2924,7 +2924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa58f3202f845294cb4da7a45fc6753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene01_invoked: 1
+  current_objective: There is no active objective at the moment.
+  cutscene01_invoked: 0
   cutscene03_invoked: 0
   cutscene05_invoked: 0
   instructor_trigger_secaction_mode: 1
@@ -3226,6 +3227,26 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114986530010306062, guid: 67271c96f8fb25b4296363e94dbc7e12,
+        type: 2}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 224904813299445392, guid: 67271c96f8fb25b4296363e94dbc7e12,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1896
+      objectReference: {fileID: 0}
+    - target: {fileID: 224135486757549426, guid: 67271c96f8fb25b4296363e94dbc7e12,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1045
+      objectReference: {fileID: 0}
+    - target: {fileID: 224410518463162984, guid: 67271c96f8fb25b4296363e94dbc7e12,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1045
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67271c96f8fb25b4296363e94dbc7e12, type: 2}

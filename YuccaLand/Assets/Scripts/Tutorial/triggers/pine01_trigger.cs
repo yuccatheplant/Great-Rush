@@ -80,7 +80,7 @@ public class pine01_trigger : MonoBehaviour {
 		playercontroller.bool_roam_cutscene = true;
 
 		string said_text = "Just a pine tree.";
-		float wanted_time = 1f;
+		float wanted_time = 1.5f;
 
 		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
 

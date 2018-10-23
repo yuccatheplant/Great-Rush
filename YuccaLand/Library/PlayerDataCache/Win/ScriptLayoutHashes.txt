@@ -6,7 +6,7 @@ Assets/Scenes/Menu.unity
 Assets/Scenes/tutorial.unity
 SceneListEnd?
 83de6275cd0ca2f6c5868b2dee0ab7f3 Assembly-CSharp.dll:.item_picker
-37e03ac5c3bad52a8dd38fbf7da6eb7c Assembly-CSharp.dll:.gamemanager_tutorial
+43fbce68fa6eecf420ab3f11727ec755 Assembly-CSharp.dll:.gamemanager_tutorial
 7a9fbc7a3bb2bb6a3cccc2878de53095 Assembly-CSharp.dll:.Weapon
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown

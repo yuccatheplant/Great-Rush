@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class gamemanager_tutorial : MonoBehaviour {
+	public string current_objective = "There is no active objective at the moment.";
 
 	//init for opening cutscene
 	public bool cutscene01_invoked = false;
@@ -25,18 +27,33 @@ public class gamemanager_tutorial : MonoBehaviour {
 	public bool fence_t_repaired = false;
 
 
+
+
+	Text objective_text;
 	void Start () {
+		objective_text = GameObject.Find ("objective_text").GetComponent<Text> ();
+
 		//Load savegame slot will not be performed in this case, because it is tutorial scenario.
 
 		StartCoroutine ( initialize() );
 	}
 	
 	IEnumerator initialize () {
-		yield return null; // Wait one frame so all other objects can initialize
+		yield return null;// Wait one frame so all other objects can initialize
 
 		GameObject.Find ("gate01_trigger").GetComponent<gate_trigger> ().open_close_gate (gate_t_openned);
 		GameObject.Find("fence02").GetComponent<Animator>().SetBool ("repaired",fence_t_repaired);
+
+		update_current_objective (null);
 	}
 
+
+	public void update_current_objective (string new_objective) {
+		if (new_objective != null) {
+			current_objective = new_objective;
+		}
+		objective_text.text = current_objective;
+
+	}
 
 }

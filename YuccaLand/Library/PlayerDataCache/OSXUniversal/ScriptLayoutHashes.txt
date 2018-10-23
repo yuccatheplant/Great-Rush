@@ -1,12 +1,12 @@
 OSXStandalone
 PlayerPath?
-C:/Users/dlaci/Desktop/Mac.app
+C:/Users/dlaci/Desktop/GreatRush.app
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/tutorial.unity
 SceneListEnd?
 83de6275cd0ca2f6c5868b2dee0ab7f3 Assembly-CSharp.dll:.item_picker
-37e03ac5c3bad52a8dd38fbf7da6eb7c Assembly-CSharp.dll:.gamemanager_tutorial
+43fbce68fa6eecf420ab3f11727ec755 Assembly-CSharp.dll:.gamemanager_tutorial
 7a9fbc7a3bb2bb6a3cccc2878de53095 Assembly-CSharp.dll:.Weapon
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -104,7 +104,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-936e08344d3f391391d1b1372a3bdfe2 Assembly-CSharp.dll:.Settings
+e336ba3402400cd48b0588d2e622eb33 Assembly-CSharp.dll:.Settings
 66b3109aa5921cf800bec17926c6adba Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 66484d06c5f19c41c05ca68836821a2e Unity.2D.PixelPerfect.dll:UnityEngine.U2D.PixelPerfectCamera
 efdf0c2e391094d70f6fa1469b1f205e Assembly-CSharp.dll:.gate_trigger
@@ -122,7 +122,7 @@ da21fc3f8056b1f91c3dd09c7bf4f90a UnityEngine.Networking.dll:UnityEngine.Networki
 529a95e9e8e7686c4816e08fbb37183f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-df9583375b4f87999840ef81a53efb25 Assembly-CSharp.dll:.hotbar_controler
+24c0f375686a147e433ae84a37dfdc7a Assembly-CSharp.dll:.hotbar_controler
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -185,7 +185,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.event_manager_loader
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-4a6765e223cc3bcd7a4c33c956bde574 Assembly-CSharp.dll:.crafting_tables
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.crafting_tables
 3164598c082a24c780e03f2ecc269617 Assembly-CSharp.dll:.height_changer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.log_trigger
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
