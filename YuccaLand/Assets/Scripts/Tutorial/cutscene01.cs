@@ -191,7 +191,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Why can't I move?!";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -429,7 +429,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "I think I do.";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -563,7 +563,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Why me?";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -772,7 +772,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So it is done.";
 		float wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -806,7 +806,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "That's it?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -838,7 +838,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So can I continue in my journey then?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -875,7 +875,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So what is the problem now?!";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -912,7 +912,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Let's do this then.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_angry, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {

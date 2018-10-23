@@ -96,7 +96,7 @@ public class item_picker : MonoBehaviour {
 		player_controller.bool_roam_cutscene = true;
 
 		if (special_inspect_text == "") { 
-			StartCoroutine (dialog.say_something ( dialog.player_name , item.inspect_text, item.inspect_time, dialog.player_neutral, player_head ));
+			StartCoroutine (dialog.say_something ( dialog.player_name , item.inspect_text, item.inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
 
 			float wanted_time = item.inspect_time;
 			float current_time = 0f;
@@ -110,7 +110,7 @@ public class item_picker : MonoBehaviour {
 				yield return null;
 			}
 		} else {
-			StartCoroutine (dialog.say_something ( dialog.player_name , special_inspect_text, special_inspect_time, dialog.player_neutral, player_head ));
+			StartCoroutine (dialog.say_something ( dialog.player_name , special_inspect_text, special_inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
 
 			float wanted_time = special_inspect_time;
 			float current_time = 0f;
@@ -165,7 +165,7 @@ public class item_picker : MonoBehaviour {
 		float wanted_time = 2f;
 		float current_time = 0f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, "I can carry nothing more.", wanted_time, dialog.player_sad, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, "I can carry nothing more.", wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 
 		while (current_time < wanted_time) {

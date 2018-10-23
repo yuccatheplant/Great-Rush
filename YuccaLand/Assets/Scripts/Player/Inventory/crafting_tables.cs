@@ -3,54 +3,113 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class crafting_tables : MonoBehaviour {
-	GameObject player;
+	player_controller player;
 	Transform pickables;
 	inventory Inventory;
+	dialog_system dialog;
+	Settings settings;
+	Animator player_head;
 	void Start () {
-		player = GameObject.Find ("player");
+		player = GameObject.Find ("player").GetComponent<player_controller>();
 		pickables = GameObject.Find ("Pickables").transform;
 		Inventory = inventory.instance;
+		dialog = GameObject.Find("subtitles_canvas").GetComponent<dialog_system>();
+		settings = GameObject.Find ("Settings").GetComponent<Settings> ();
+		player_head = GameObject.Find ("player_head").GetComponent<Animator> ();
 	}
+
+	IEnumerator crafting_response (string said_text, float wanted_time, float freeze_time) {
+		while (settings.already_interacting) {
+			yield return null;
+		}
+		settings.already_interacting = true;
+		player.bool_roam_cutscene = true;
+
+		player.bool_cutscene = true;
+		float current_time = 0f;
+		while (current_time < freeze_time) {
+			current_time += Time.deltaTime;
+
+			yield return null;
+		}
+		player.bool_cutscene = false;
+
+
+
+
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head));
+
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+			yield return null;
+		}
+		yield return null;
+
+		player.bool_roam_cutscene = false;
+		settings.already_interacting = false;
+
+
+	}
+
 
 //Function that compares first ID
 	public void find_recipe1 (int slot1, int slot2, int id1, int id2) {
-		
+		bool result = false;
+
+
 		switch (id1) {
 		case 1: 
-			find_recipe2_id_1 (slot1, slot2, id2);
+			result = find_recipe2_id_1 (slot1, slot2, id2);
 			break;
 		}
 			
+
+		if (!result) {
+			string said_text = "It is not working...";
+			float wanted_time = 2f;
+			StartCoroutine (crafting_response(said_text, wanted_time, 0f));
+		}
 	}
 
 //Functions that finds crafting function after combining is done
-	void find_recipe2_id_1 (int slot1, int slot2, int id2) {
+	bool find_recipe2_id_1 (int slot1, int slot2, int id2) {
+		bool result = false;
 
 		switch (id2) {
 		case 1002:
-			craft_id1_id1001 (slot2);
+			result = craft_id1_id1001 (slot2);
 			break;
 		}
 
-
-
 		slot1 = slot2;
 		slot2 = slot1;
+
+		return result;
 	}
 		
 
 //Functions that contains exact crafting
-	void craft_id1_id1001(int slot2) {
+	bool craft_id1_id1001(int slot2) {
 		Inventory.item_remove (Inventory.items [slot2]);
 
 		if (Inventory.items.Count < Inventory.inventory_space) {
-			//Inventory.item_add (crafted_items [0]);
 			Inventory.item_add ( Resources.Load<Item>("Inventory/Items/Timber") );
 		} else {
-			//drop_item (crafted_items [0]);
 			drop_item ( Resources.Load<Item>("Inventory/Items/Timber") );
 		}
-			
+
+
+		string said_text = "I've managed to create Timber stick.";
+		float wanted_time = 3f;
+		StartCoroutine ( crafting_response(said_text, wanted_time, 2f) );
+
+		return true;
 	}
 
 

@@ -11,7 +11,7 @@ public class dialog_system : MonoBehaviour {
 	Text say_text;
 	Image person_icon;
 
-	public Sprite player_neutral, player_happy, player_angry, player_sad;
+	public Sprite[] player_portrait;
 
 	public string player_name;
 

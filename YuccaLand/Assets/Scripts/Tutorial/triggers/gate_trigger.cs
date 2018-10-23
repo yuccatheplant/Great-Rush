@@ -76,7 +76,7 @@ public class gate_trigger : MonoBehaviour {
 
 		said_text = "This is just an ordinary gate and I don't know why I am inspecting it.";
 		float wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 4.5f;
 		float current_time = 0f;

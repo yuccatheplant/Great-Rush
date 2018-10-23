@@ -82,7 +82,7 @@ public class fence_section_trigger : MonoBehaviour {
 		string said_text = "This fence is broken.";
 		float wanted_time = 2f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 
 		float current_time = 0f;
@@ -114,7 +114,7 @@ public class fence_section_trigger : MonoBehaviour {
 		string said_text = "This fence is freshly repaired.";
 		float wanted_time = 2.2f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -156,7 +156,7 @@ public class fence_section_trigger : MonoBehaviour {
 			say_this = "I need something to repair this fence.";
 			want_time = 2f;
 
-			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_neutral, player_head )  );
+			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			want_time += 0.1f;
 			current_time = 0f;
@@ -211,7 +211,7 @@ public class fence_section_trigger : MonoBehaviour {
 			say_this = "Fence is now repaired!";
 			want_time = 2f;
 
-			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_neutral, player_head )  );
+			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			current_time = 0f;
 
@@ -235,7 +235,7 @@ public class fence_section_trigger : MonoBehaviour {
 			say_this = "Why would I want to destroy that fence? I am supposed to repair it!";
 			want_time = 4f;
 
-			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_neutral, player_head )  );
+			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			current_time = 0f;
 
@@ -256,7 +256,7 @@ public class fence_section_trigger : MonoBehaviour {
 			say_this = "This is not working...";
 			want_time = 2f;
 
-			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_neutral, player_head )  );
+			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			current_time = 0f;
 
@@ -296,7 +296,7 @@ public class fence_section_trigger : MonoBehaviour {
 		string said_text = "No more work is needed here.";
 		float wanted_time = 2.5f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {

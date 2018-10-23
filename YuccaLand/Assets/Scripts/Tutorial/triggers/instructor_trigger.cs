@@ -88,7 +88,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "This man is helping me, but I don't like him anyway.";
 		float wanted_time = 3.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -172,7 +172,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "So...";
 		wanted_time = 1f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 0.7f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -203,7 +203,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "How are you?";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 1.8f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -235,7 +235,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Alright...";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -287,7 +287,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "As long as there won't be any motivational speeches, I am fine.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_happy, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -322,7 +322,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Don't say, there will be motivational speeches.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -338,7 +338,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Just please don't.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -375,7 +375,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Oh great...";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_sad, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -553,7 +553,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Damn, sorry...";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_sad, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -719,7 +719,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -800,7 +800,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -926,7 +926,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -991,7 +991,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_neutral, player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.25f;
 		current_time = 0f;
