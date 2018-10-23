@@ -19,7 +19,7 @@ public class inventory_slot_ui : MonoBehaviour {
 		icon.sprite = item.icon;
 		icon.enabled = true;
 
-		label.text = item.name;
+		label.text = item.name_eng;
 	}
 
 	public void remove_item_ui () {

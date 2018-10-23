@@ -2924,8 +2924,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa58f3202f845294cb4da7a45fc6753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_objective: There is no active objective at the moment.
-  cutscene01_invoked: 1
+  current_objective_eng: There is no active objective at the moment.
+  current_objective_cze: "Moment\xE1ln\u011B nem\xE1\u0161 \u017E\xE1dn\xFD aktivn\xED
+    \xFAkol."
+  cutscene01_invoked: 0
   cutscene03_invoked: 0
   cutscene05_invoked: 0
   instructor_trigger_secaction_mode: 1

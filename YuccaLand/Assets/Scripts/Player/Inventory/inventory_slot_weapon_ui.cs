@@ -20,7 +20,7 @@ public class inventory_slot_weapon_ui : MonoBehaviour {
 			icon.sprite = weapon.icon;
 			icon.enabled = true;
 
-			label.text = weapon.name;
+			label.text = weapon.name_eng;
 		}
 	}
 
@@ -35,7 +35,7 @@ public class inventory_slot_weapon_ui : MonoBehaviour {
 
 	public void drop_weapon () {
 		if (weapon != null) {
-			GameObject dropped_object = new GameObject (weapon.name);
+			GameObject dropped_object = new GameObject (weapon.name_eng);
 			dropped_object.transform.SetParent (pickables);
 			GameObject player = GameObject.Find ("player");
 			dropped_object.transform.position = new Vector3 ( player.transform.position.x, player.transform.position.y-0.3f , player.transform.position.z );

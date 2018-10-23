@@ -11,8 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6770946ae056bbd44a55a84814426b48, type: 3}
   m_Name: Crafting_test
   m_EditorClassIdentifier: 
-  name: Combine
+  name_eng: Combine
+  name_cze: Zkombinovat
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   ID: 1002
-  inspect_text: This object may be used for a test for combining items.
+  inspect_text_eng: This object can be used for combining test.
+  inspect_text_cze: "Tento objekt m\u016F\u017Ee b\xFDt pou\u017Eit pro test kombinov\xE1n\xED
+    p\u0159edm\u011Bt\u016F."
   inspect_time: 4

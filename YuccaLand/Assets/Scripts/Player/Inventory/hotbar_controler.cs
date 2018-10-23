@@ -57,7 +57,7 @@ public class hotbar_controler : MonoBehaviour {
 		if (weapon != null) {
 			icon.sprite = weapon.icon;
 			icon.enabled = true;
-			info.text = weapon.name;
+			info.text = weapon.name_eng;
 
 
 		} else {

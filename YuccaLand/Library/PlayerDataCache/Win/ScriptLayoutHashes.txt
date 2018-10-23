@@ -6,8 +6,8 @@ Assets/Scenes/Menu.unity
 Assets/Scenes/tutorial.unity
 SceneListEnd?
 83de6275cd0ca2f6c5868b2dee0ab7f3 Assembly-CSharp.dll:.item_picker
-43fbce68fa6eecf420ab3f11727ec755 Assembly-CSharp.dll:.gamemanager_tutorial
-7a9fbc7a3bb2bb6a3cccc2878de53095 Assembly-CSharp.dll:.Weapon
+c8835a357b69016d1945445c74eba5b9 Assembly-CSharp.dll:.gamemanager_tutorial
+261d98b58818fcc0bb52d4b5bc40e6ea Assembly-CSharp.dll:.Weapon
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -104,7 +104,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-e336ba3402400cd48b0588d2e622eb33 Assembly-CSharp.dll:.Settings
+aac860b89023149af0460e71251ad33e Assembly-CSharp.dll:.Settings
 66b3109aa5921cf800bec17926c6adba Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 66484d06c5f19c41c05ca68836821a2e Unity.2D.PixelPerfect.dll:UnityEngine.U2D.PixelPerfectCamera
 efdf0c2e391094d70f6fa1469b1f205e Assembly-CSharp.dll:.gate_trigger
@@ -142,7 +142,7 @@ f75ad9f5d4d7966730fe139716a4f6fa Assembly-CSharp.dll:.inventory_slot_weapon_ui
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 e90d63f6363e1afadec5eba5de8e4002 Assembly-CSharp.dll:.new_load_game_manag
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
-27163c6fc79710e57b2d82d98e583788 Assembly-CSharp.dll:.dialog_system
+44f35b12a7bdd44243157a3ad0899a84 Assembly-CSharp.dll:.dialog_system
 02cf59beea155ac7dadc09729e0fa6f5 Assembly-CSharp.dll:.player_controller
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 486cd95c82d8305219c352c06b776e1f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -164,7 +164,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 392c5b921098bd4c139d9146d0efa6d7 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-d32cac114083185cc3a1a940e8de46fb Assembly-CSharp.dll:.Item
+43090809b5a2728f16fa506833b6a197 Assembly-CSharp.dll:.Item
 486cd95c82d8305219c352c06b776e1f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 9d863b523b577f5c3d915351a74cd338 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender

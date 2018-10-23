@@ -96,7 +96,10 @@ public class item_picker : MonoBehaviour {
 		player_controller.bool_roam_cutscene = true;
 
 		if (special_inspect_text == "") { 
-			StartCoroutine (dialog.say_something ( dialog.player_name , item.inspect_text, item.inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
+
+			string inspect_text = item.inspect_text_eng;
+
+			StartCoroutine (dialog.say_something ( dialog.player_name , inspect_text, item.inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
 
 			float wanted_time = item.inspect_time;
 			float current_time = 0f;

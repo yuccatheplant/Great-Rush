@@ -386,7 +386,11 @@ public class player_controller : MonoBehaviour {
 
 	public bool open_close_objectives (bool enabled) {
 		objective_canvas.enabled = enabled;
-		hotbar_canvas.enabled = !enabled;
+		if (!settings.hotbar_hidden) {
+			hotbar_canvas.enabled = !enabled;
+		} else {
+			hotbar_canvas.enabled = false;
+		}
 
 		return enabled;
 	}

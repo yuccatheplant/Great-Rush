@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 
 public class Settings : MonoBehaviour {
-	
+	public byte language = 1;
+
 	public int int_sound_intensity = 5;
 	public int int_music_intensity = 5;
 

@@ -2,7 +2,8 @@
 
 [CreateAssetMenu (fileName = "New Weapon", menuName = "Inventory/Weapon")]
 public class Weapon : ScriptableObject {
-	new public string name = "New Weapon";
+	public string name_eng = "New Weapon";
+	public string name_cze = "Nová zbraň";
 	public Sprite icon = null;
 	public int ID = 0;
 
@@ -15,6 +16,7 @@ public class Weapon : ScriptableObject {
 	public bool is_loaded = true;
 	public bool loses_damage_over_distance = false;
 
-	public string inspect_text = "This is surely a weapon...";
+	public string inspect_text_eng = "This is surely a weapon...";
+	public string inspect_text_cze = "Tohle je určitě zbraň...";
 	public float inspect_time = 2f;
 }

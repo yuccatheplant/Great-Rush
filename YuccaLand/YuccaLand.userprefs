@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\Inventory\Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\player_controller.cs">
     <Files>
       <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="392" Column="34" />
       <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_ui.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="1" Column="1" />
@@ -22,7 +22,8 @@
       <File FileName="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\Item.cs" Line="5" Column="24" />
+      <File FileName="Assets\Scripts\Player\Inventory\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_weapon_ui.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,5 +1,6 @@
 Additions:
 -Added ability to combine items together to obtain a different one
+-Added custom PlayerCharacter response to crafting
 -Added Objective Window that can be accessed by pressing "O" key (Can not be rebound at the moment)
 -Added GUI dissapearing when cutscene starts
 -Added ability to push objects away from the path
