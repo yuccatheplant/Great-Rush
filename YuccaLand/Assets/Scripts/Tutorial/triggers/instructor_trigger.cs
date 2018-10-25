@@ -9,7 +9,8 @@ public class instructor_trigger : MonoBehaviour {
 	NPC_movement instructor;
 	Settings settings;
 
-	string said_text;
+	string said_text = "";
+	string said_text_cze = "";
 	bool triggered = false;
 
 	bool first_inspection = true;
@@ -88,7 +89,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "This man is helping me, but I don't like him anyway.";
 		float wanted_time = 3.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -172,7 +173,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "So...";
 		wanted_time = 1f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 0.7f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -203,7 +204,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "How are you?";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 1.8f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -219,7 +220,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "I'm fine, thanks for asking.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -235,7 +236,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Alright...";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -251,7 +252,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "So you are able to talk to people now.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.7f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -267,7 +268,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "That's good, because you will talk a lot in this game.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -287,7 +288,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "As long as there won't be any motivational speeches, I am fine.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -303,7 +304,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Well...";
 		wanted_time = 1f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 1.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -322,7 +323,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Don't say, there will be motivational speeches.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -338,7 +339,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Just please don't.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -355,7 +356,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "There might be some...";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -375,7 +376,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Oh great...";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -392,7 +393,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Back to business.";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 1.6f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -411,7 +412,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "As I said before, you can inspect things or people.";
 		wanted_time = 3.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.6f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -427,7 +428,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "You can try it on me now.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -443,7 +444,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Step close to me as before and use " + settings.GetComponent<Settings>().Key_To_String(settings.GetComponent<Settings>().cont_action) + " button to inspect me.";
 		wanted_time = 5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
@@ -498,7 +499,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Good job!";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 
 
 		wanted_time = 1.6f;
@@ -517,7 +518,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "I just have one friendly advice.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -533,7 +534,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Next time, say it in your head and not out loud!";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -553,7 +554,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Damn, sorry...";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -569,7 +570,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "No harm done.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -585,7 +586,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Talking and inspecting is good.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.6f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -604,7 +605,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "But now you need to do something with an object.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -620,7 +621,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Do you see that fence here?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 1.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -657,7 +658,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "There is a gate in it.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -673,7 +674,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Open it by using " + settings.GetComponent<Settings>().Key_To_String(settings.GetComponent<Settings>().cont_secaction) + " button.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -719,7 +720,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -751,7 +752,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Open the fence gate by Secondary Action, which is assigned to " + settings.Key_To_String( settings.cont_secaction ) + " button.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -800,7 +801,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -831,7 +832,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Go to that axe on the left and pick it up using Secondary Action, which is assigned to " + settings.Key_To_String( settings.cont_secaction ) + " button.";
 		wanted_time = 5f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 5.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -847,7 +848,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Then move to the tree down here and once again use Secondary Action to interact with it.";
 		wanted_time = 5f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 5.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -863,7 +864,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Your inventory will be shown, where you use movement buttons to navigate inside.";
 		wanted_time = 5f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 5.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -879,7 +880,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Select Axe in the inventory by Primary Action which is assigned to " + settings.Key_To_String( settings.cont_action ) + " button while the correct slot is highlited.";
 		wanted_time = 6f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 6.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -926,7 +927,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.1f;
 		current_time = 0f;
@@ -945,7 +946,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Since you have a branch now, you just need to step to the fence, use Secondary action to interact with it and select Branch by Primary action when in Inventory.";
 		wanted_time = 8f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 8.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -991,7 +992,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Can you repeat it for me?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 2.25f;
 		current_time = 0f;
@@ -1011,7 +1012,7 @@ public class instructor_trigger : MonoBehaviour {
 
 		said_text = "Just walk towards the log to push it away.";
 		wanted_time = 6f;
-		StartCoroutine ( dialog.say_something(instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something(instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 6.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {

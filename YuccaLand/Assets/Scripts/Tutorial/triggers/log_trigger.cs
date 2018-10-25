@@ -7,7 +7,8 @@ public class log_trigger : MonoBehaviour {
 	GameObject player;
 	Settings settings;
 
-	string said_text;
+	string said_text = "";
+	string said_text_cze = "";
 	bool triggered = false;
 
 
@@ -61,8 +62,9 @@ public class log_trigger : MonoBehaviour {
 		player.GetComponent<player_controller> ().bool_roam_cutscene = true;
 
 		said_text = "This is wooden log that blocks the path.";
+		said_text_cze = "Dřevěná kláda blokující cestu.";
 		float wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 4.5f;
 		float current_time = 0f;

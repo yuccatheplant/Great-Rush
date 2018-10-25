@@ -80,9 +80,10 @@ public class pine01_trigger : MonoBehaviour {
 		playercontroller.bool_roam_cutscene = true;
 
 		string said_text = "Just a pine tree.";
+		string said_text_cze = "Obyčejná Borovice";
 		float wanted_time = 1.5f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 
 		float current_time = 0f;
@@ -112,9 +113,10 @@ public class pine01_trigger : MonoBehaviour {
 		playercontroller.bool_roam_cutscene = true;
 
 		string said_text = "Still just a pine tree.";
+		string said_text_cze = "Stále obyčejná Borovice.";
 		float wanted_time = 1.5f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -147,15 +149,17 @@ public class pine01_trigger : MonoBehaviour {
 		playercontroller.float_moveyaxis = 0f;
 
 		string say_this;
+		string say_this_cze;
 		float want_time;
 		float current_time;
 
 
 
-			say_this = "I need a branch from this tree.";
+		say_this = "I need a branch from this tree.";
+		say_this_cze = "Potřebuji větev z tohoto stromu.";
 			want_time = 2f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			want_time += 0.1f;
 			current_time = 0f;
@@ -205,9 +209,10 @@ public class pine01_trigger : MonoBehaviour {
 
 			if (Inventory.item_add (item)) {
 				say_this = "I sucessfuly cut a branch.";
+				say_this_cze = "Úspěšně jsem usekl větev.";
 				want_time = 2f;
 
-				StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+				StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 				current_time = 0f;
 
@@ -241,9 +246,10 @@ public class pine01_trigger : MonoBehaviour {
 				dropped_object_trigger.item = item;
 
 				say_this = "I sucessfuly cut a branch, but I can't carry it now.";
+				say_this_cze = "Úspěšně jsem usekl větev, ale teď ji fakt už neunesu.";
 				want_time = 3f;
 
-				StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+				StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 				current_time = 0f;
 
@@ -269,9 +275,10 @@ public class pine01_trigger : MonoBehaviour {
 			yield return new WaitForSeconds (0.5f);
 
 			say_this = "I need something else to cut that branch.";
+			say_this_cze = "Na useknutí větve budu potřebovat něco jiného.";
 			want_time = 2.5f;
 
-			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 			current_time = 0f;
 
@@ -308,10 +315,11 @@ public class pine01_trigger : MonoBehaviour {
 		playercontroller.float_movexaxis = 0f;
 		playercontroller.float_moveyaxis = 0f;
 
-		string said_text = "I don't think I should torture this tree more than is necessary";
+		string said_text = "I don't think I should torture this tree more than is necessary.";
+		string said_text_cze = "Nemyslím si, že bych měl ten strom ničit víc než je nutné.";
 		float wanted_time = 3f;
 
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		float current_time = 0f;
 		while (current_time < wanted_time) {

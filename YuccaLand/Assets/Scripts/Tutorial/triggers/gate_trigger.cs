@@ -8,7 +8,8 @@ public class gate_trigger : MonoBehaviour {
 	Settings settings;
 	public GameObject gate;
 
-	string said_text;
+	string said_text = "";
+	string said_text_cze = "";
 	bool triggered = false;
 
 	Animator gate_animation;
@@ -75,8 +76,9 @@ public class gate_trigger : MonoBehaviour {
 		player.GetComponent<player_controller> ().bool_roam_cutscene = true;
 
 		said_text = "This is just an ordinary gate and I don't know why I am inspecting it.";
+		said_text_cze = "Tohle je obyčejná branka a já nemám sebemenší tušení, proč na ni zírám.";
 		float wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 
 		wanted_time = 4.5f;
 		float current_time = 0f;

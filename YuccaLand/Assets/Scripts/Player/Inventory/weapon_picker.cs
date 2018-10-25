@@ -17,6 +17,7 @@ public class weapon_picker : MonoBehaviour {
 
 
 	public string special_inspect_text = "";
+	public string special_inspect_text_cze = "";
 	public float special_inspect_time = 0f;
 
 	Animator player_head;
@@ -97,10 +98,8 @@ public class weapon_picker : MonoBehaviour {
 
 		player_controller.bool_roam_cutscene = true;
 
-		if (special_inspect_text == "") { 
-			string inspect_text = weapon.inspect_text_eng;
-
-			StartCoroutine (dialog.say_something ( dialog.player_name, inspect_text, weapon.inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
+		if (special_inspect_text == "" || special_inspect_text_cze == "") { 
+			StartCoroutine (dialog.say_something ( dialog.player_name, weapon.inspect_text_eng, weapon.inspect_text_cze, weapon.inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
 
 			float wanted_time = weapon.inspect_time;
 			float current_time = 0f;
@@ -114,7 +113,7 @@ public class weapon_picker : MonoBehaviour {
 				yield return null;
 			}
 		} else {
-			StartCoroutine (dialog.say_something ( dialog.player_name , special_inspect_text, special_inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
+			StartCoroutine (dialog.say_something ( dialog.player_name , special_inspect_text, special_inspect_text_cze, special_inspect_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head ));
 
 			float wanted_time = special_inspect_time;
 			float current_time = 0f;

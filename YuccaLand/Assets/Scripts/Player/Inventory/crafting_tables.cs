@@ -35,9 +35,9 @@ public class crafting_tables : MonoBehaviour {
 		player.bool_cutscene = false;
 
 
+		string said_text_cze = "";
 
-
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head));
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head));
 
 		current_time = 0f;
 		while (current_time < wanted_time) {

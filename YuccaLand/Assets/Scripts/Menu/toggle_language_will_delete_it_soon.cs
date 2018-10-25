@@ -11,7 +11,7 @@ public class toggle_language_will_delete_it_soon : MonoBehaviour {
 		if (Settings.instance.language == 1) {
 			gameObject.GetComponent<Toggle> ().isOn = true;
 		} else {
-			gameObject.GetComponent<Toggle> ().isOn = true;
+			gameObject.GetComponent<Toggle> ().isOn = false;
 		}
 	
 		Destroy (this);

@@ -27,16 +27,13 @@ public class Objective_Manager : MonoBehaviour {
 	}
 
 	public void update_current_objective (string new_objective_eng, string new_objective_cze) {
-		
 
 		switch (settings.language) {
 		case 1:
-			Debug.Log("Czech");
 			objective_label.text = "Momentální ukol:";
 			objective_text.text = new_objective_cze;
 			break;
 		default:
-			Debug.Log("English");
 			objective_label.text = "Current objective:";
 			objective_text.text = new_objective_eng;
 			break;

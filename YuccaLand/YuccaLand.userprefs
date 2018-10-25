@@ -1,33 +1,31 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\toggle_language_will_delete_it_soon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="40" Column="3" />
-      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="12" Column="35" />
-      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="392" Column="34" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory_ui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\player_controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="79" Column="84" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\log_trigger.cs" Line="10" Column="23" />
       <File FileName="Assets\Scripts\Height_Changer\height_changer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="459" Column="33" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="1347" Column="83" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="163" Column="73" />
+      <File FileName="Assets\Scripts\Player\Inventory\item_picker.cs" Line="170" Column="111" />
       <File FileName="Assets\Scripts\Player\Inventory\hotbar_controler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\instructor_trigger.cs" Line="13" Column="27" />
       <File FileName="Assets\Scripts\NPC_movement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Settings.cs" Line="58" Column="33" />
-      <File FileName="Assets\Scripts\dialog_system.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\weapon_picker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\dialog_system.cs" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\weapon_picker.cs" Line="20" Column="46" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\pine01_trigger.cs" Line="319" Column="87" />
+      <File FileName="Assets\Scripts\Player\Inventory\crafting_tables.cs" Line="38" Column="28" />
       <File FileName="Assets\Scripts\Player\Inventory\Weapon.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\Item.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\Inventory\inventory_slot_weapon_ui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\menu_loader.cs" Line="44" Column="6" />
+      <File FileName="Assets\Scripts\menu_loader.cs" Line="53" Column="3" />
       <File FileName="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" Line="58" Column="3" />
-      <File FileName="Assets\Scripts\Objective_Manager.cs" Line="39" Column="22" />
-      <File FileName="Assets\Scripts\Menu\graphics_manag.cs" Line="325" Column="1" />
-      <File FileName="Assets\Scripts\Menu\button_click.cs" Line="114" Column="6" />
-      <File FileName="Assets\Scripts\Menu\toggle_language_will_delete_it_soon.cs" Line="17" Column="18" />
+      <File FileName="Assets\Scripts\Objective_Manager.cs" Line="37" Column="4" />
+      <File FileName="Assets\Scripts\Menu\graphics_manag.cs" Line="324" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

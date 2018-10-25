@@ -13,7 +13,8 @@ public class cutscene01 : MonoBehaviour {
 
 	private bool instructor_move_up = false;
 
-	private string said_text;
+	private string said_text = "";
+	private string said_text_cze = "";
 
 	private Animator player_head;
 	private Animator instructor_head;
@@ -162,7 +163,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 1.5f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -204,7 +205,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 2.5f;
-		StartCoroutine (dialog.say_something (dialog.player_name, said_text, wanted_time, dialog.player_portrait [player_head.GetInteger ("emotion")], player_head));
+		StartCoroutine (dialog.say_something (dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait [player_head.GetInteger ("emotion")], player_head));
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -234,7 +235,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 3f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -259,7 +260,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 2f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 2.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -284,7 +285,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 5f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 5.2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -307,7 +308,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 2f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 
 		player.bool_cutscene = false;
 
@@ -347,7 +348,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 2f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -370,7 +371,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 2.5f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -394,7 +395,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 6f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 6.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -419,7 +420,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 7f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 7.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -442,7 +443,7 @@ public class cutscene01 : MonoBehaviour {
 			break;
 		}
 		wanted_time = 3f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -483,7 +484,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 3f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 3.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -514,7 +515,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 5f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 5.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -545,7 +546,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 6f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 6.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -576,7 +577,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 6f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 6.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -607,7 +608,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -638,7 +639,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -669,7 +670,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -700,7 +701,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -731,7 +732,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -762,7 +763,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -794,7 +795,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -826,7 +827,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -860,7 +861,7 @@ public class cutscene01 : MonoBehaviour {
 				break;
 			}
 			wanted_time = 3f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 3.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
@@ -880,7 +881,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Now, step close to me and use " + settings.Key_To_String(settings.cont_secaction) + " button to talk with me.";
 		wanted_time = 7f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 7.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -944,7 +945,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So as you can see, The fence got hole in it.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.6f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -960,7 +961,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "I want you to repair it.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -980,7 +981,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Why me?";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -996,7 +997,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "And who else is here to do it?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1019,7 +1020,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "There is an Axe on that tree stump.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1035,7 +1036,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Pick it up into your inventory by using " + settings.Key_To_String(settings.cont_secaction) + " button while nearby.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1055,7 +1056,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Then go to the tree down here and use " + settings.Key_To_String(settings.cont_secaction) + " button to interact with it.";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1071,7 +1072,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Once you do this, your inventory will pop up.";
 		wanted_time = 3f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1087,7 +1088,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Navigate through it by movement buttons and once you select Axe, use " + settings.Key_To_String(settings.cont_action) + " button to use it on the tree.";
 		wanted_time = 5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 5.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1132,7 +1133,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Well done!";
 		float wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 1.6f;
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1148,7 +1149,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So now you have a branch! Do me a favour and repair the fence with it.\nI believe you can do it without any hint now.";
 		wanted_time = 6f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 6.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1187,7 +1188,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So it is done.";
 		float wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		float current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1205,7 +1206,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Alright.";
 		wanted_time = 1.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1221,7 +1222,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "That's it?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1237,7 +1238,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "I believe so.\nYes.";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1253,7 +1254,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So can I continue in my journey then?";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1269,7 +1270,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Not really...";
 		wanted_time = 1f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 1.01f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1290,7 +1291,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "So what is the problem now?!";
 		wanted_time = 2.5f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1311,7 +1312,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "The main problem here is that the log here must be moved away from the way...";
 		wanted_time = 4f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 4.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1327,7 +1328,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Let's do this then.";
 		wanted_time = 2f;
-		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
+		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
 		wanted_time = 2.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -1343,7 +1344,7 @@ public class cutscene01 : MonoBehaviour {
 
 		said_text = "Alright. You can push the log away from the path. Just step close to it and then walk to it to push it away.";
 		wanted_time = 6f;
-		StartCoroutine ( dialog.say_something( instructor_name, said_text, wanted_time, instructor_neutral, instructor_head )  );
+		StartCoroutine ( dialog.say_something( instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head )  );
 		wanted_time = 6.5f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
