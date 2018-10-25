@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class menu_loader : MonoBehaviour {
 
+	public delegate void after_menu();
+	public after_menu on_after_menu_call_back;
+
 	Settings settings;
 
+	public static menu_loader instance;
+
+
+
+	void Awake(){
+		if (menu_loader.instance != null) {
+			Destroy (this);
+		}
+		instance = this;
+	}
+
 	void Start () {
+		
 		settings = GameObject.Find ("Settings").GetComponent<Settings> ();
 	}
 
@@ -20,14 +35,12 @@ public class menu_loader : MonoBehaviour {
 		}
 
 		if (Input.anyKeyDown) {
-			if (Input.GetKey ( KeyCode.Escape )) {
+			if (Input.GetKey (KeyCode.Escape)) {
 				if (!SceneManager.GetSceneByName ("Menu").isLoaded) {
 					//pause
 
 					game_pause ();
-
-				} else {
-
+			
 				}
 			}
 

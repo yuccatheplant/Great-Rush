@@ -456,6 +456,7 @@ public class cutscene01 : MonoBehaviour {
 		}
 		yield return null;
 
+		game_manager.set_new_objective ("Use "+ settings.Key_To_String (settings.cont_objective) +" button to open Objectives window.","Použij klávesu "+settings.Key_To_String (settings.cont_objective)+", abys otevřel úkolové okno.");
 
 
 		player.bool_roam_cutscene = false;

@@ -63,8 +63,10 @@
      <Compile Include="Assets\Scripts\Menu\menu_opening.cs" />
      <Compile Include="Assets\Scripts\Menu\new_load_game_manag.cs" />
      <Compile Include="Assets\Scripts\Menu\sound_manag.cs" />
+     <Compile Include="Assets\Scripts\Menu\toggle_language_will_delete_it_soon.cs" />
      <Compile Include="Assets\Scripts\menu_loader.cs" />
      <Compile Include="Assets\Scripts\NPC_movement.cs" />
+     <Compile Include="Assets\Scripts\Objective_Manager.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory\crafting_tables.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory\hotbar_controler.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory\inventory.cs" />

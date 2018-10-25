@@ -4,6 +4,7 @@ Additions:
 -Added Objective Window that can be accessed by pressing "O" key (Can not be rebound at the moment)
 -Added GUI dissapearing when cutscene starts
 -Added ability to push objects away from the path
+-Added function to change language (Note that Main Menu IS NOT translated since it will be completely changed in the future)
 
 Fixes:
 GUI is now made for full HD native resolution
@@ -11,6 +12,7 @@ GUI is now made for full HD native resolution
 Known bugs:
 - When Resolution ratio is too wide, main menu background will not cover whole screen
 - Resolution changer may ignore some resolutions
+- If language changed when dialog displayed, it will stay in old language and will update language from new dialog
 
 Planned:
 

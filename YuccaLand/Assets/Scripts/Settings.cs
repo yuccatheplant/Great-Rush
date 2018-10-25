@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
+//using UnityEngine.UI;
 
 public class Settings : MonoBehaviour {
+	public static Settings instance;
+
 	public byte language = 1;
 
 	public int int_sound_intensity = 5;
@@ -49,7 +50,12 @@ public class Settings : MonoBehaviour {
 
 
 	void Awake () {
-		DontDestroyOnLoad(GameObject.Find("Settings"));
+		if (instance != null) {
+			Destroy (this);
+		}
+		instance = this;
+
+		DontDestroyOnLoad(gameObject);
 	}
 
 

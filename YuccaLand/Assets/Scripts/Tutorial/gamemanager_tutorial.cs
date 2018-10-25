@@ -29,13 +29,14 @@ public class gamemanager_tutorial : MonoBehaviour {
 
 
 
-	Text objective_label;
-	Text objective_text;
-	Settings settings;
+
+	menu_loader Menu_Loader;
+	Objective_Manager objective_manager;
 	void Start () {
-		objective_label = GameObject.Find ("objective_label").GetComponent<Text> ();
-		objective_text = GameObject.Find ("objective_text").GetComponent<Text> ();
-		settings = GameObject.Find ("Settings").GetComponent<Settings> ();
+		Menu_Loader = menu_loader.instance;
+		Menu_Loader.on_after_menu_call_back += after_menu_init;
+		objective_manager = Objective_Manager.instance;
+
 		//Load savegame slot will not be performed in this case, because it is tutorial scenario.
 
 		StartCoroutine ( initialize() );
@@ -47,27 +48,30 @@ public class gamemanager_tutorial : MonoBehaviour {
 		GameObject.Find ("gate01_trigger").GetComponent<gate_trigger> ().open_close_gate (gate_t_openned);
 		GameObject.Find("fence02").GetComponent<Animator>().SetBool ("repaired",fence_t_repaired);
 
-		update_current_objective (current_objective_eng,current_objective_cze);
+		after_menu_init ();
+
+
 
 	}
 
-
-	public void update_current_objective (string new_objective_eng, string new_objective_cze) {
+	void after_menu_init () {
 		
-		current_objective_eng = new_objective_eng;
-		current_objective_cze = new_objective_cze;
+		set_new_objective (null, null);
 
 
-		switch (settings.language) {
-		case 1:
-			objective_label.text = "Momentální ukol:";
-			objective_text.text = new_objective_cze;
-			break;
-		default:
-			objective_label.text = "Current objective:";
-			objective_text.text = new_objective_eng;
-			break;
-		}
 	}
+
+	public void set_new_objective (string new_objective_eng, string new_objective_cze) {
+		
+		if (new_objective_eng != null && new_objective_cze != null) {
+			current_objective_eng = new_objective_eng;
+			current_objective_cze = new_objective_cze;
+		}
+
+		objective_manager.update_current_objective (current_objective_eng, current_objective_cze);
+	}
+
+		
+
 
 }

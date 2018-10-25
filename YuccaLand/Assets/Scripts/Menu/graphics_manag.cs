@@ -313,4 +313,16 @@ public class graphics_manag : MonoBehaviour {
 		GetComponent<button_click> ()._Button_Main_Settings();
 	}
 
+
+	public void _Toggle_Czech_Language () {
+		Settings settings = Settings.instance;
+
+		if (GameObject.Find ("toggle_language").GetComponent<Toggle> ().isOn) {
+			settings.language = 1;
+		} else {
+			settings.language = 0;
+		}
+
+	}
+
 }
