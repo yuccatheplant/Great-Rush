@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7f72601ea462543bd5d6d8e7627cfb, type: 3}
+  m_Name: tutorial_eng
+  m_EditorClassIdentifier: 
+  player_name: Player
+  instructor_name: Instructor
+  cut01_01: You stuck?
+  cut01_02: Why can't I move?!
+  cut01_03: Maybe you can't, because you never tried it before...
+  cut01_04: So let's try it now.
+  cut01_05p1: 'You can walk by pressing '
+  cut01_05p2_4: ', '
+  cut01_05p5: ' buttons.'
+  cut01_06: You should try it right now.
+  cut01_07: Well done!
+  cut01_08: Let's try something more complicated now.
+  cut01_09: Throughout the game you will have to complete many tasks to proceed in
+    game.
+  cut01_10p1: 'So If you are not sure what to do at the moment, you can press '
+  cut01_10p2: ' button to show current objective.'
+  cut01_11: Better try it right now.
+  cut01_12p1: 'Open Objective window by using '
+  cut01_12p2: ' button, please.'
+  cut01_13p1: 'Could you... please open that objective window by '
+  cut01_13p2: ' button, please?'
+  cut01_14p1: 'Nice weather, isn''t it? By the way, '
+  cut01_14p2: ' button will open objective window...'
+  cut01_15p1: 'Hey? Are you there? Open that objective window by '
+  cut01_15p2: ' button so we can move on.'
+  cut01_16p1: 'Do you know that I have plenty of time? I have more time than you.
+    So don''t press that '
+  cut01_16p2: ' button if you don''t want to. I don''t care!'
+  cut01_17p1: 'Could you god damn it push that BLOODY '
+  cut01_17p2: ' button and open that BLOODY objective window?!'
+  cut01_18p1: 'I am sorry if I was rude on you before. Just push the '
+  cut01_18p2: ' button okay?'
+  cut01_19p1: 'Hey, if you push the '
+  cut01_19p2: ' button, you will se really awesome thing!'
+  cut01_20p1: 'Do you know that story about a guy, who didn''t pushed a button in
+    one game? He didn''t clicked '
+  cut01_20p2: ' button the whole time and then he died of old age.'
+  cut01_21: Someone would say that ANYBODY has to be able to push a button...
+  cut01_22p1: 'Did you know that Trench is supposed to cover soldiers, Excavation
+    to lower terrain and '
+  cut01_22p2: ' button to open objective window?'
+  cut01_23p1: 'Do you know what is green and looks like grass
+
+    It is '
+  cut01_23p2: ' button and I made up the rest.'
+  cut01_24p1: 'Open Objective window by using '
+  cut01_24p2: ' button, please.'

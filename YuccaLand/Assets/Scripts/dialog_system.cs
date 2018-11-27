@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class dialog_system : MonoBehaviour {
 
+	public string person_name = "";
+	public string said_text = "";
+
 	Settings settings;
 
 	Canvas main_bubble;
@@ -34,7 +37,7 @@ public class dialog_system : MonoBehaviour {
 		if (head != null) {
 			head.SetBool ("talking", true);
 		}
-			
+
 		person_icon.sprite = icon;
 		person_text.text = person_name + ":";
 		say_text.text = said_text_eng;
@@ -64,7 +67,7 @@ public class dialog_system : MonoBehaviour {
 				say_text.text = animated_text_eng;
 				break;
 			}
-				
+
 			float section_limit = 0.02f;
 			float section_timer = 0f;
 			while (section_timer < section_limit) {
@@ -99,6 +102,108 @@ public class dialog_system : MonoBehaviour {
 				say_text.text = said_text_eng;
 				break;
 			}
+
+			yield return null;
+		}
+
+		if (head != null) {
+			head.SetBool ("talking", false);
+		}
+		main_bubble.enabled = false;
+
+	}
+
+	public IEnumerator say_somethingV2( float whole_limit, Sprite icon, Animator head ) {
+		yield return null;
+
+		main_bubble.enabled = true;
+
+
+		if (head != null) {
+			head.SetBool ("talking", true);
+		}
+
+		person_icon.sprite = icon;
+		person_text.text = person_name + ":";
+		say_text.text = said_text;
+
+
+
+		//int text_length = 1;
+
+		float animation_time = 0f;
+
+
+		for (int i = 0; i < said_text.Length; i++) {
+			string animated_text = "";
+
+			for (int n = 0; n <= i; n++) {
+				animated_text += said_text [n];
+			}
+			person_text.text = person_name + ":";
+			say_text.text = animated_text;
+
+			float section_limit = 0.02f;
+			float section_timer = 0f;
+			while (section_timer < section_limit) {
+				section_timer += Time.deltaTime;
+				animation_time += Time.deltaTime;
+
+				if (settings.cutscene_skip) {
+					break;
+				}
+
+				yield return null;
+			}
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+		}
+
+
+
+		/*for (int i = 0; i < said_text.Length; i++) {
+			if (i < said_text.Length) {
+				animated_text += said_text [i];
+			}
+
+
+			person_text.text = person_name + ":";
+			say_text.text = animated_text;
+
+
+			float section_limit = 0.02f;
+			float section_timer = 0f;
+			while (section_timer < section_limit) {
+				section_timer += Time.deltaTime;
+				animation_time += Time.deltaTime;
+
+				if (settings.cutscene_skip) {
+					break;
+				}
+
+				yield return null;
+			}
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+		}*/
+
+
+		while (animation_time < whole_limit) {
+			animation_time += Time.deltaTime;
+
+			if (settings.cutscene_skip) {
+				break;
+			}
+
+
+			person_text.text = person_name + ":";
+			say_text.text = said_text;
+
+
 
 			yield return null;
 		}

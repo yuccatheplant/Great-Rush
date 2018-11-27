@@ -2909,7 +2909,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1705228609}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3953,6 +3954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: d48a8331fdd4de04dbc5131fa4364304, type: 2}
   special_inspect_text: An Axe stuck in tree stump.
+  special_inspect_text_cze: 
   special_inspect_time: 2
   initialize: 0
 --- !u!61 &1182254153
@@ -4948,6 +4950,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1705228608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705228609}
+  - component: {fileID: 1705228610}
+  m_Layer: 0
+  m_Name: strings_tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705228609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1705228608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 898662202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705228610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1705228608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d92226970bb1e49bb7128e9275541c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strings: {fileID: 11400000, guid: 7586e66e9bd0c274da26216c66f364b7, type: 2}
 --- !u!1 &1742494219
 GameObject:
   m_ObjectHideFlags: 0
@@ -5107,6 +5150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 403bc86c97d30654cbc7359a65edf5bd, type: 2}
   special_inspect_text: 
+  special_inspect_text_cze: 
   special_inspect_time: 0
   initialize: 1
 --- !u!212 &1841754538
