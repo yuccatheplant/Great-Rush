@@ -12,6 +12,8 @@ public class StringsHolder_Tutorial : MonoBehaviour {
 
 	Settings settings;
 	menu_loader Menu_Loader;
+	gamemanager_tutorial game_manager;
+	Objective_Manager objective_manager;
 
 	void Awake () {
 		if (instance != null) {
@@ -26,7 +28,8 @@ public class StringsHolder_Tutorial : MonoBehaviour {
 
 		Menu_Loader = menu_loader.instance;
 		Menu_Loader.on_after_menu_call_back += reload_language;
-
+		game_manager = gamemanager_tutorial.instance;
+		objective_manager = Objective_Manager.instance;
 
 		reload_language ();
 	}
@@ -43,6 +46,23 @@ public class StringsHolder_Tutorial : MonoBehaviour {
 			break;
 		}
 
+		objetive_update ();
+	}
+
+	public void objetive_update() {
+		string objective_head = strings.obj_header;
+		string objective_body;
+
+		switch (game_manager.objective_status) {
+		case 1:
+			objective_body = strings.obj1_p1 + settings.Key_To_String (settings.cont_objective) + strings.obj1_p2;
+			break;
+		default: 
+			objective_body = strings.obj_null;
+			break;
+		}
+
+		objective_manager.set_objective (objective_head, objective_body);
 	}
 
 }

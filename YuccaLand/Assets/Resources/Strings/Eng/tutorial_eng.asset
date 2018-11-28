@@ -13,6 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_name: Player
   instructor_name: Instructor
+  obj_header: 'Current objective:'
+  obj_null: There is no active objective at the moment.
+  obj1_p1: 'Use '
+  obj1_p2: ' button to open Objectives window.'
   cut01_01: You stuck?
   cut01_02: Why can't I move?!
   cut01_03: Maybe you can't, because you never tried it before...
@@ -56,5 +60,6 @@ MonoBehaviour:
 
     It is '
   cut01_23p2: ' button and I made up the rest.'
+  cut01_23p3: ' button and I made up the rest.'
   cut01_24p1: 'Open Objective window by using '
   cut01_24p2: ' button, please.'

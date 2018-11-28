@@ -14,6 +14,7 @@ public class camera_controler : MonoBehaviour {
 	float deltaY;
 
 	void Start() {
+		
 		follow_obj = GameObject.Find ("camera_target");
 
 		follow_obj.transform.position = target_object.transform.position;

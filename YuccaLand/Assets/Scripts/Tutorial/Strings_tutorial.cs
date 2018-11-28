@@ -6,6 +6,11 @@ public class Strings_tutorial : ScriptableObject {
 	public string player_name = "Player";
 	public string instructor_name = "Instructor";
 
+	public string obj_header = "Current objective:";
+	public string obj_null = "There is no active objective at the moment.";
+	public string obj1_p1 = "Use ";
+	public string obj1_p2 =	" button to open Objectives window.";
+
 	public string cut01_01 = "You stuck?";
 	public string cut01_02 = "Why can't I move?!";
 	public string cut01_03 = "Maybe you can't, because you never tried it before...";
@@ -41,8 +46,9 @@ public class Strings_tutorial : ScriptableObject {
 	public string cut01_21 = "Someone would say that ANYBODY has to be able to push a button...";
 	public string cut01_22p1 = "Did you know that Trench is supposed to cover soldiers, Excavation to lower terrain and ";
 	public string cut01_22p2 = " button to open objective window?";
-	public string cut01_23p1 = "Do you know what is green and looks like grass\nIt is " ;
-	public string cut01_23p2 = " button and I made up the rest.";
+	public string cut01_23p1 = "Do you know what is green and looks like grass?" ;
+	public string cut01_23p2 = "It is " ;
+	public string cut01_23p3 = " button and I made up the rest.";
 	public string cut01_24p1 = "Open Objective window by using ";
 	public string cut01_24p2 = " button, please.";
 

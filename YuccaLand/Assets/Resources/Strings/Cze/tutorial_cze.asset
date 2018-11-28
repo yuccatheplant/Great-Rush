@@ -13,6 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_name: "Hr\xE1\u010D"
   instructor_name: Instruktor
+  obj_header: "Moment\xE1ln\xED \xFAkol:"
+  obj_null: "\u017D\xE1dn\xE9 \xFAkoly nejsou moment\xE1ln\u011B aktivn\xED"
+  obj1_p1: "Pou\u017Eij "
+  obj1_p2: " kl\xE1vesu pro otev\u0159en\xED \xFAkolov\xE9ho okna."
   cut01_01: Zaseklej?
   cut01_02: "Pro\u010D se nem\u016F\u017Eu h\xFDbat?!"
   cut01_03: "Mo\u017En\xE1 nem\u016F\u017Ee\u0161, proto\u017Ee jsi to nikdy p\u0159edt\xEDm
@@ -57,5 +61,6 @@ MonoBehaviour:
 
     It is '
   cut01_23p2: ' button and I made up the rest.'
+  cut01_23p3: ' button and I made up the rest.'
   cut01_24p1: 'Open Objective window by using '
   cut01_24p2: ' button, please.'

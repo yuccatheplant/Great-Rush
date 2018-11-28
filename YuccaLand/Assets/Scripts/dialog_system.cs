@@ -162,36 +162,6 @@ public class dialog_system : MonoBehaviour {
 		}
 
 
-
-		/*for (int i = 0; i < said_text.Length; i++) {
-			if (i < said_text.Length) {
-				animated_text += said_text [i];
-			}
-
-
-			person_text.text = person_name + ":";
-			say_text.text = animated_text;
-
-
-			float section_limit = 0.02f;
-			float section_timer = 0f;
-			while (section_timer < section_limit) {
-				section_timer += Time.deltaTime;
-				animation_time += Time.deltaTime;
-
-				if (settings.cutscene_skip) {
-					break;
-				}
-
-				yield return null;
-			}
-			if (settings.cutscene_skip) {
-				break;
-			}
-
-		}*/
-
-
 		while (animation_time < whole_limit) {
 			animation_time += Time.deltaTime;
 
