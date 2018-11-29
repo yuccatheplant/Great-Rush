@@ -8,8 +8,8 @@ public class Strings_tutorial : ScriptableObject {
 
 	public string obj_header = "Current objective:";
 	public string obj_null = "There is no active objective at the moment.";
-	public string obj1_p1 = "Use ";
-	public string obj1_p2 =	" button to open Objectives window.";
+	public string obj01_p1 = "Use ";
+	public string obj01_p2 =	" button to open Objectives window.";
 
 	public string cut01_01 = "You stuck?";
 	public string cut01_02 = "Why can't I move?!";

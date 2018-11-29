@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class dialog_system : MonoBehaviour {
-
+	
 	public string person_name = "";
 	public string said_text = "";
 
@@ -31,6 +31,8 @@ public class dialog_system : MonoBehaviour {
 
 
 	public IEnumerator say_something( string person_name, string said_text_eng, string said_text_cze, float whole_limit, Sprite icon, Animator head ) {
+		
+
 
 		main_bubble.enabled = true;
 
@@ -111,10 +113,12 @@ public class dialog_system : MonoBehaviour {
 		}
 		main_bubble.enabled = false;
 
+
 	}
 
 	public IEnumerator say_somethingV2( float whole_limit, Sprite icon, Animator head ) {
-		yield return null;
+		
+
 
 		main_bubble.enabled = true;
 

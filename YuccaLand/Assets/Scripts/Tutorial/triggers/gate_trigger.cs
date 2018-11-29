@@ -37,7 +37,7 @@ public class gate_trigger : MonoBehaviour {
 
 	void Update () {
 		if (triggered) {
-			if (player.GetComponent<player_controller> ().bool_action_pressed ) {//&& game_manager.gate_t_unlocked
+			if (player.GetComponent<player_controller> ().bool_action_pressed && game_manager.instructor_trigger_secaction_mode >= 3 ) {//&& game_manager.gate_t_unlocked
 				StartCoroutine (primary_action ());
 
 			} else

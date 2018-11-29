@@ -55,7 +55,7 @@ public class StringsHolder_Tutorial : MonoBehaviour {
 
 		switch (game_manager.objective_status) {
 		case 1:
-			objective_body = strings.obj1_p1 + settings.Key_To_String (settings.cont_objective) + strings.obj1_p2;
+			objective_body = strings.obj01_p1 + settings.Key_To_String (settings.cont_objective) + strings.obj01_p2;
 			break;
 		default: 
 			objective_body = strings.obj_null;

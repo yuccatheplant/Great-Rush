@@ -40,7 +40,7 @@ public class fence_section_trigger : MonoBehaviour {
 
 	void Update () {
 		if (triggered) {
-			if (playercontroller.bool_action_pressed  ) {//&& game_manager.fence_t_unlocked
+			if (playercontroller.bool_action_pressed && game_manager.instructor_trigger_secaction_mode >= 3 ) {//&& game_manager.fence_t_unlocked
 				if (!game_manager.fence_t_repaired) {
 					StartCoroutine (inspect ());
 				} else {
@@ -72,6 +72,7 @@ public class fence_section_trigger : MonoBehaviour {
 	}
 
 	IEnumerator inspect () {
+		
 		if (settings.already_interacting) {
 			yield break;
 		}

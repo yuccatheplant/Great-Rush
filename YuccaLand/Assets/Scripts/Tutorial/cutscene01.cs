@@ -78,6 +78,8 @@ public class cutscene01 : MonoBehaviour {
 
 	IEnumerator cutscene1()
 	{
+		
+
 		main_camera.change_target (GameObject.Find ("cam_tar_01"), 1f, true);
 
 		float wanted_time;
@@ -159,9 +161,10 @@ public class cutscene01 : MonoBehaviour {
 		}
 
 
+
 		wanted_time = 1.5f;
 		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
-		wanted_time = 1f;
+		wanted_time = 2f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
@@ -175,6 +178,9 @@ public class cutscene01 : MonoBehaviour {
 
 			yield return null;
 		}
+
+
+
 
 		player.float_standX = 0f;
 		player.float_standY = -1f;
@@ -196,7 +202,7 @@ public class cutscene01 : MonoBehaviour {
 
 
 
-
+	
 
 		wanted_time = 2.5f;
 		StartCoroutine (dialog.say_somethingV2 (wanted_time, dialog.player_portrait [player_head.GetInteger ("emotion")], player_head));
@@ -226,6 +232,7 @@ public class cutscene01 : MonoBehaviour {
 
 
 
+
 		wanted_time = 3f;
 		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3.2f;
@@ -245,6 +252,8 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 
 		player_head.SetInteger ("emotion", 0);
+
+
 
 		wanted_time = 2f;
 		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
@@ -287,12 +296,10 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 
 
-			said_text_cze = "Měl bys to zkusit hned teď.";
 
-			said_text = "You should try it right now.";
 
 		wanted_time = 2f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 
 		player.bool_cutscene = false;
 
@@ -300,6 +307,9 @@ public class cutscene01 : MonoBehaviour {
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
+
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_06;
 
 			if (settings.cutscene_skip) {
 				break;
@@ -310,6 +320,8 @@ public class cutscene01 : MonoBehaviour {
 
 
 		yield return new WaitUntil (() => player.bool_player_moves);
+
+
 
 		wanted_time = 0.5f;
 		current_time = 0f;
@@ -324,16 +336,16 @@ public class cutscene01 : MonoBehaviour {
 		}
 
 
-			said_text_cze = "Výborně!";
-		
-			said_text = "Well done!";
 
 		wanted_time = 2f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
+
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_07;
 
 			if (settings.cutscene_skip) {
 				break;
@@ -344,16 +356,16 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 
 
-			said_text_cze = "Zkusíme něco komplikovanějšího.";
-		
-			said_text = "Let's try something more complicated now.";
 
 		wanted_time = 2.5f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
+
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_08;
 
 			if (settings.cutscene_skip) {
 				break;
@@ -364,18 +376,16 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 
 
-
-			said_text_cze = "V průběhu hry budeš muset splnit mnoho úkolů, abys postoupil dál ve hře.";
-
-			said_text = "Throughout the game you will have to complete many tasks to proceed in game.";
-
 		wanted_time = 6f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 6.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
 
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_09;
+
 			if (settings.cutscene_skip) {
 				break;
 			}
@@ -386,18 +396,17 @@ public class cutscene01 : MonoBehaviour {
 
 
 
-	
-			said_text_cze = "Takže pokud si nejsi jistý tím, co máš v danou chvíli dělat, stiskni klávesu " + settings.Key_To_String (settings.cont_objective) + " pro zobrazení momentálního úkolu.";
-
-			said_text = "So If you are not sure what to do at the moment, you can press " + settings.Key_To_String (settings.cont_objective) + " button to show current objective.";
 
 		wanted_time = 7f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 7.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
 
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_10p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_10p2;
+
 			if (settings.cutscene_skip) {
 				break;
 			}
@@ -407,16 +416,17 @@ public class cutscene01 : MonoBehaviour {
 		yield return null;
 
 
-			said_text_cze = "Radši to zkus hned teď.";
-
-			said_text = "You better try it right now.";
 
 		wanted_time = 3f;
-		StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+		StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 		wanted_time = 3.1f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
 			current_time += Time.deltaTime;
+
+			dialog.person_name = stringholder.strings.instructor_name;
+			dialog.said_text = stringholder.strings.cut01_11;
+
 
 			if (settings.cutscene_skip) {
 				break;
@@ -429,11 +439,10 @@ public class cutscene01 : MonoBehaviour {
 		game_manager.objective_status = 1;
 		stringholder.objetive_update ();
 
-		//game_manager.set_new_objective ("Use "+ settings.Key_To_String (settings.cont_objective) +" button to open Objectives window.","Použij klávesu "+settings.Key_To_String (settings.cont_objective)+", abys otevřel úkolové okno.");
-
-
 		player.bool_roam_cutscene = false;
 	
+
+
 		wanted_time = 7f;
 		current_time = 0f;
 		while (current_time < wanted_time) {
@@ -446,21 +455,28 @@ public class cutscene01 : MonoBehaviour {
 			yield return null;
 		}
 
+		bool instructor_pissed = false;
+
+
+
+
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Otevři úkolové okno pomocí klávesy " + settings.Key_To_String (settings.cont_objective) + ", prosím.";
-
-				said_text = "Open Objective window by using " + settings.Key_To_String (settings.cont_objective) + " button, please.";
-			
 			wanted_time = 3f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 3.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_12p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_12p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
 		}
+
+
 
 		wanted_time = 10f;
 		current_time = 0f;
@@ -474,17 +490,20 @@ public class cutscene01 : MonoBehaviour {
 			yield return null;
 		}
 
+
+
+
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Mohl bys... prosímtě otevřít úkolové okno pomocí klávesy " + settings.Key_To_String (settings.cont_objective) + ", prosím?";
-			
-				said_text = "Could you... please open that objective window by " + settings.Key_To_String (settings.cont_objective) + " button, please?";
 
 			wanted_time = 5f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 5.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_13p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_13p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -504,15 +523,15 @@ public class cutscene01 : MonoBehaviour {
 
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Je hezky, že? Jen tak mimochodem, klávesa " + settings.Key_To_String (settings.cont_objective) + " otevře okno s úkoly...";
-
-				said_text = "Nice weather, isn't it? By the way, " + settings.Key_To_String (settings.cont_objective) + " button will open objective window...";
 
 			wanted_time = 6f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 6.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_14p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_14p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -531,16 +550,16 @@ public class cutscene01 : MonoBehaviour {
 		}
 
 		if (!settings.objective_opened) {
-			
-				said_text_cze = "Halo? Jsi tam? Otevři to úkolové okno klávesou " + settings.Key_To_String (settings.cont_objective) + ", ať můžeme pokračovat.";
 
-				said_text = "Hey? Are you there? Open that objective window by " + settings.Key_To_String (settings.cont_objective) + " button so we can move on.";
 
 			wanted_time = 6f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 6.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_15p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_15p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -560,15 +579,15 @@ public class cutscene01 : MonoBehaviour {
 
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Víš o tom, že já mám času dost? Rozhodně víc než ty. Takže si klidně tu klávesu " + settings.Key_To_String (settings.cont_objective) + " nemačkej. Je mi to jedno!";
-			
-				said_text = "Do you know that I have plenty of time? I have more time than you. So don't press that " + settings.Key_To_String (settings.cont_objective) + " button if you don't want to. I don't care!";
-			
+
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_16p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_16p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -586,17 +605,76 @@ public class cutscene01 : MonoBehaviour {
 			yield return null;
 		}
 
+		instructor_pissed = true;
+
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Mohl bys už sakra zmáčknout to ZATRACENÝ tlačítko " + settings.Key_To_String (settings.cont_objective) + " a otevřít to ZATRACENÝ úkolový okno?!";
-			
-				said_text = "Could you god damn it push that BLOODY " + settings.Key_To_String (settings.cont_objective) + " button and open that BLOODY objective window?!";
 
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_17p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_17p2;
+
+				current_time += Time.deltaTime;
+				yield return null;
+			}
+		}
+
+		wanted_time = 20f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.objective_opened) {
+				break;
+			}
+
+			yield return null;
+		}
+
+		if (!settings.objective_opened) {
+
+
+			wanted_time = 8f;
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
+			wanted_time = 8.1f;
+			current_time = 0f;
+			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_18p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_18p2;
+
+
+				current_time += Time.deltaTime;
+				yield return null;
+			}
+		}
+
+		wanted_time = 15f;
+		current_time = 0f;
+		while (current_time < wanted_time) {
+			current_time += Time.deltaTime;
+
+			if (settings.objective_opened) {
+				break;
+			}
+
+			yield return null;
+		}
+
+		if (!settings.objective_opened) {
+
+
+			wanted_time = 8f;
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
+			wanted_time = 8.1f;
+			current_time = 0f;
+			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_19p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_19p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -616,15 +694,15 @@ public class cutscene01 : MonoBehaviour {
 
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Promiň, že jsem na tebe tak vyjel. Jen prosím stiskni to tlačítko " + settings.Key_To_String (settings.cont_objective) + " ano?";
-
-				said_text = "I am sorry if I was rude on you before. Just push the " + settings.Key_To_String (settings.cont_objective) + " button okay?";
 
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_20p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_20p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -644,71 +722,15 @@ public class cutscene01 : MonoBehaviour {
 
 		if (!settings.objective_opened) {
 			
-				said_text_cze = "Hele, když stiskneš tlačítko " + settings.Key_To_String (settings.cont_objective) + ", tak uvidíš fakt úžasnou věc!";
-
-				said_text = "Hey, if you push the " + settings.Key_To_String (settings.cont_objective) + " button, you will se really awesome thing!";
 
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
-				current_time += Time.deltaTime;
-				yield return null;
-			}
-		}
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_21;
 
-		wanted_time = 20f;
-		current_time = 0f;
-		while (current_time < wanted_time) {
-			current_time += Time.deltaTime;
-
-			if (settings.objective_opened) {
-				break;
-			}
-
-			yield return null;
-		}
-
-		if (!settings.objective_opened) {
-			
-				said_text_cze = "Znáš tu historku o tom, kdo odmítal kliknout na tlačítko v jedné hře? Neklikl za celou dobu ani jednou na " + settings.Key_To_String (settings.cont_objective) + " tlačítko a pak umřel stářím.";
-
-				said_text = "Do you know that story about a guy, who didn't pushed a button in one game? He didn't clicked " + settings.Key_To_String (settings.cont_objective) + " button the whole time and then he died of old age.";
-
-			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
-			wanted_time = 8.1f;
-			current_time = 0f;
-			while (current_time < wanted_time) {
-				current_time += Time.deltaTime;
-				yield return null;
-			}
-		}
-
-		wanted_time = 15f;
-		current_time = 0f;
-		while (current_time < wanted_time) {
-			current_time += Time.deltaTime;
-
-			if (settings.objective_opened) {
-				break;
-			}
-
-			yield return null;
-		}
-
-		if (!settings.objective_opened) {
-			
-			said_text_cze = "člověk by řekl, že něco jako kliknutí tlačítka musí zvládnout KAŽDÝ...";
-			
-			said_text = "Someone would say that ANYBODY has to be able to push a button...";
-
-			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
-			wanted_time = 8.1f;
-			current_time = 0f;
-			while (current_time < wanted_time) {
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -729,15 +751,15 @@ public class cutscene01 : MonoBehaviour {
 
 		if (!settings.objective_opened) {
 			
-			said_text_cze = "Věděl jsi, že Zákop slouží ke krytu vojáků, Výkop ke snížení terénu a klávesa " + settings.Key_To_String (settings.cont_objective) + " k otevření úkolového okna?";
-
-			said_text = "Did you know that Trench is supposed to cover soldiers, Excavation to lower terrain and " + settings.Key_To_String (settings.cont_objective) + " button to open objective window?";
 
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_22p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_22p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -759,15 +781,15 @@ public class cutscene01 : MonoBehaviour {
 		if (!settings.objective_opened) {
 			
 		
-			said_text_cze = "Víš co je zelené a vypadá to jako tráva?\nJe to tlačítko " + settings.Key_To_String (settings.cont_objective) + " a to ostatní jsem si vymyslel.";
-
-			said_text = "Do you know what is green and looks like grass\nIt is " + settings.Key_To_String (settings.cont_objective) + " button and I made up the rest.";
 
 			wanted_time = 8f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 8.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_23p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_23p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -790,15 +812,14 @@ public class cutscene01 : MonoBehaviour {
 			}
 
 
-			said_text_cze = "Otevři úkolové okno pomocí klávesy " + settings.Key_To_String (settings.cont_objective) + ", prosím.";
-			said_text = "Open Objective window by using " + settings.Key_To_String (settings.cont_objective) + " button, please.";
-
-
 			wanted_time = 3f;
-			StartCoroutine (dialog.say_something (instructor_name, said_text, said_text_cze, wanted_time, instructor_neutral, instructor_head));
+			StartCoroutine (dialog.say_somethingV2 (wanted_time, instructor_neutral, instructor_head));
 			wanted_time = 3.1f;
 			current_time = 0f;
 			while (current_time < wanted_time) {
+				dialog.person_name = stringholder.strings.instructor_name;
+				dialog.said_text = stringholder.strings.cut01_24p1 + settings.Key_To_String (settings.cont_objective) + stringholder.strings.cut01_24p2;
+
 				current_time += Time.deltaTime;
 				yield return null;
 			}
@@ -810,6 +831,14 @@ public class cutscene01 : MonoBehaviour {
 
 
 		player.bool_roam_cutscene = true;
+
+		if (instructor_pissed) {
+		
+			
+
+
+		}
+
 
 
 
@@ -831,6 +860,7 @@ public class cutscene01 : MonoBehaviour {
 
 		game_manager.instructor_trigger_secaction_mode = 1;
 		player.bool_roam_cutscene = false;
+
 
 	}
 

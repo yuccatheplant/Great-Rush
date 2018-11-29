@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c131f887c0e15498d20aab29d9ebf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force_animation_reset: 0
   bool_cutscene: 0
   bool_roam_cutscene: 0
   byte_game_mode: 0
@@ -2926,7 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective_status: 0
-  cutscene01_invoked: 1
+  cutscene01_invoked: 0
   cutscene03_invoked: 0
   cutscene05_invoked: 0
   instructor_trigger_secaction_mode: 1
