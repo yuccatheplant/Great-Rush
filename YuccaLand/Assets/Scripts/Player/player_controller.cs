@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player_controller : MonoBehaviour {
+	public static player_controller instance;
+
+	public bool force_animation_reset = false;
 
 	public bool bool_cutscene = false;
 	public bool bool_roam_cutscene = false;
@@ -57,6 +60,13 @@ public class player_controller : MonoBehaviour {
 	Canvas objective_canvas;
 	Canvas hotbar_canvas;
 
+
+	void Awake() {
+		if (player_controller.instance != null) {
+			Destroy (this);
+		}
+		instance = this;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -162,16 +172,13 @@ public class player_controller : MonoBehaviour {
 					}
 
 					if (is_pressed (settings.cont_hotbar1, float_mouse_wheel, true)) {
-						hotbar.current_slot = 0;
-						hotbar.update_hotbar ();
+						hotbar.set_hotbar (0);
 					}
 					if (is_pressed (settings.cont_hotbar2, float_mouse_wheel, true)) {
-						hotbar.current_slot = 1;
-						hotbar.update_hotbar ();
+						hotbar.set_hotbar (1);
 					}
 					if (is_pressed (settings.cont_hotbar3, float_mouse_wheel, true)) {
-						hotbar.current_slot = 2;
-						hotbar.update_hotbar ();
+						hotbar.set_hotbar (2);
 					}
 
 
@@ -352,6 +359,17 @@ public class player_controller : MonoBehaviour {
 
 		PreviousX = float_standX;
 		PreviousY = float_standY;
+
+		if (force_animation_reset) {
+			force_animation_reset = false;
+
+			animator_handL.SetBool("Moving",false);
+			animator_handR.SetBool("Moving",false);
+			//animator_head.SetBool("Moving",false);
+			animator_melee.SetBool("Moving",false);
+			animator_ranged.SetBool("Moving",false);
+			animator_player.SetBool("Moving",false);
+		}
 
 	}
 

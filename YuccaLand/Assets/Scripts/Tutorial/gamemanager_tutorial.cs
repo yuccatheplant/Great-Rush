@@ -5,9 +5,8 @@ using UnityEngine.UI;
 public class gamemanager_tutorial : MonoBehaviour {
 	public static gamemanager_tutorial instance;
 
-	/*public string current_objective_eng = "There is no active objective at the moment.";
-	public string current_objective_cze = "Momentálně nemáš žádný aktivní úkol.";*/
-
+	//init for in-level variables
+	//public int hotbar_selected_slot = 0;
 	public int objective_status = 0;
 
 	//init for opening cutscene
@@ -53,9 +52,6 @@ public class gamemanager_tutorial : MonoBehaviour {
 
 		GameObject.Find ("gate01_trigger").GetComponent<gate_trigger> ().open_close_gate (gate_t_openned);
 		GameObject.Find("fence02").GetComponent<Animator>().SetBool ("repaired",fence_t_repaired);
-
-
-
 
 	}
 

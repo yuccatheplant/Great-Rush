@@ -80,7 +80,7 @@ public class fence_section_trigger : MonoBehaviour {
 		playercontroller.bool_roam_cutscene = true;
 
 		string said_text = "This fence is broken.";
-		string said_text_cze = "Tenhle plot je rozbitý.";
+		string said_text_cze = "Rozbitý plot.";
 		float wanted_time = 2f;
 
 		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
@@ -212,8 +212,8 @@ public class fence_section_trigger : MonoBehaviour {
 
 			fence_animation.SetBool ("repaired",true);
 
-			say_this = "Fence is now repaired!";
-			say_this_cze = "Plot je teď opraven!";
+			say_this = "I've repaired the fence!";
+			say_this_cze = "Opravil jsem plot!";
 			want_time = 2f;
 
 			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
@@ -238,7 +238,7 @@ public class fence_section_trigger : MonoBehaviour {
 			yield return new WaitForSeconds (0.5f);
 
 			say_this = "Why would I want to destroy that fence? I am supposed to repair it!";
-			say_this_cze = "Proč bych měl ničit ten plot? Mám ho přece opravit a ne rozbít!";
+			say_this_cze = "Proč bych měl ničit ten plot? Mám ho přece opravit, a ne rozbít!";
 			want_time = 4f;
 
 			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
@@ -260,7 +260,7 @@ public class fence_section_trigger : MonoBehaviour {
 			yield return new WaitForSeconds (0.5f);
 
 			say_this = "This is not working...";
-			say_this_cze = "To nebude fungovat...";
+			say_this_cze = "Takhle to nefunguje...";
 			want_time = 2f;
 
 			StartCoroutine ( dialog.say_something( dialog.player_name, say_this, say_this_cze, want_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );
@@ -301,7 +301,7 @@ public class fence_section_trigger : MonoBehaviour {
 		playercontroller.float_moveyaxis = 0f;
 
 		string said_text = "No more work is needed here.";
-		string said_text_cze = "žádná další práe není třeba.";//WTF
+		string said_text_cze = "žádná další práce není třeba.";//WTF
 		float wanted_time = 2.5f;
 
 		StartCoroutine ( dialog.say_something( dialog.player_name, said_text, said_text_cze, wanted_time, dialog.player_portrait[player_head.GetInteger("emotion")], player_head )  );

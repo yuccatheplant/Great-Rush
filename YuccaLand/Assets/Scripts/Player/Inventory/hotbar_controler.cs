@@ -2,8 +2,10 @@
 using UnityEngine.UI;
 
 public class hotbar_controler : MonoBehaviour {
+	public static hotbar_controler instance;
 
-	public int current_slot = 0;
+
+	int current_slot = 0;
 
 	Weapon hands;
 
@@ -14,6 +16,15 @@ public class hotbar_controler : MonoBehaviour {
 
 	Animator animator_melee;
 	Animator animator_ranged;
+
+
+
+	void Awake () {
+		if (hotbar_controler.instance != null) {
+			Destroy (this);
+		}
+		hotbar_controler.instance = this;
+	}
 
 	void Start () {
 		Inventory = inventory.instance;
@@ -30,7 +41,18 @@ public class hotbar_controler : MonoBehaviour {
 		update_hotbar ();
 	}
 
-	public void update_hotbar () {
+	public void set_hotbar (int state) {
+		if (state != current_slot) {
+			current_slot = state;
+			update_hotbar();
+		}
+
+	}
+
+	void update_hotbar () {
+
+		player_controller.instance.force_animation_reset = true;
+
 		switch (current_slot) {
 		case 1:
 			animator_melee.SetBool ("Equiped", true);
@@ -45,6 +67,7 @@ public class hotbar_controler : MonoBehaviour {
 			set_weapon_ui (Inventory.ranged_weapon);
 			break;
 		default: 
+			player_controller.instance.force_animation_reset = false;
 			animator_melee.SetBool ("Equiped", false);
 			animator_ranged.SetBool ("Equiped", false);
 
@@ -57,12 +80,22 @@ public class hotbar_controler : MonoBehaviour {
 		if (weapon != null) {
 			icon.sprite = weapon.icon;
 			icon.enabled = true;
-			info.text = weapon.name_eng;
+
+
+			switch (Settings.instance.language) {
+			case 1:
+				info.text = weapon.name_cze;
+				break;
+			default:
+				info.text = weapon.name_eng;
+				break;
+			}
 
 
 		} else {
-			icon.enabled = false;
-			info.text = "<Empty>";
+			//Recursive call with forced hands in case, player does not have weapon on selected slot
+			set_hotbar (0);
+
 		}
 	}
 		
