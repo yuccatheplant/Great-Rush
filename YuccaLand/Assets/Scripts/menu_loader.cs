@@ -24,6 +24,7 @@ public class menu_loader : MonoBehaviour {
 	void Start () {
 		
 		settings = GameObject.Find ("Settings").GetComponent<Settings> ();
+
 	}
 
 	void Update () {

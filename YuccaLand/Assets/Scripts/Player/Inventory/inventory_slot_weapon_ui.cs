@@ -20,7 +20,15 @@ public class inventory_slot_weapon_ui : MonoBehaviour {
 			icon.sprite = weapon.icon;
 			icon.enabled = true;
 
-			label.text = weapon.name_eng;
+			switch (Settings.instance.language) {
+			case 1:
+				label.text = weapon.name_cze;
+				break;
+			default:
+				label.text = weapon.name_eng;
+				break;	
+			}
+
 		}
 	}
 

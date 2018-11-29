@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6770946ae056bbd44a55a84814426b48, type: 3}
   m_Name: Timber
   m_EditorClassIdentifier: 
-  name_eng: Timber
+  name_eng: Branch
   name_cze: "V\u011Btev"
   icon: {fileID: 21300000, guid: 8586539e3ac4e9f468c0bc1b65316c8d, type: 3}
   ID: 1001

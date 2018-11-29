@@ -19,7 +19,15 @@ public class inventory_slot_ui : MonoBehaviour {
 		icon.sprite = item.icon;
 		icon.enabled = true;
 
-		label.text = item.name_eng;
+		switch (Settings.instance.language) {
+		case 1:
+			label.text = item.name_cze;
+			break;
+		default:
+			label.text = item.name_eng;
+			break;	
+		}
+			
 	}
 
 	public void remove_item_ui () {
