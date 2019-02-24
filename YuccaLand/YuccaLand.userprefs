@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\triggers\gate_trigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tutorial\cutscene01.cs">
     <Files>
-      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="820" Column="51" />
-      <File FileName="Assets\Scripts\dialog_system.cs" Line="189" Column="3" />
-      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="43" Column="48" />
+      <File FileName="Assets\Scripts\Tutorial\cutscene01.cs" Line="806" Column="6" />
+      <File FileName="Assets\Scripts\dialog_system.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tutorial\triggers\fence_section_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tutorial\triggers\gate_trigger.cs" Line="40" Column="124" />
-      <File FileName="Assets\Scripts\Tutorial\Strings_tutorial.cs" Line="12" Column="20" NotebookId="1" />
+      <File FileName="Assets\Scripts\Settings.cs" Line="9" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

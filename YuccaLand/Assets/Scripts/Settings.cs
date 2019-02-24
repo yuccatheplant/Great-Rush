@@ -6,7 +6,7 @@ using UnityEngine;
 public class Settings : MonoBehaviour {
 	public static Settings instance;
 
-	public byte language = 1;
+	public byte language = 0; //0==EN;1==CZ
 
 	public int int_sound_intensity = 5;
 	public int int_music_intensity = 5;
