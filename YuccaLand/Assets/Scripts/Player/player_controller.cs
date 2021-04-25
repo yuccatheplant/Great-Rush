@@ -93,9 +93,25 @@ public class player_controller : MonoBehaviour {
 
 		StartCoroutine (init_close_objective ());
 	}
-		
-	
-	void Update () {
+
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey("space"))
+        {
+            Debug.Log("Casting ray");
+            Vector2 vectorUp = new Vector2(0, 1);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(vectorUp));
+            if (hit.collider != null)
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(vectorUp) * hit.distance, Color.yellow);
+                Debug.Log("Did Hit");
+            }
+
+        }
+    }
+
+    void Update () {
 		if (settings.game_paused) {
 			return;
 		}
@@ -150,8 +166,8 @@ public class player_controller : MonoBehaviour {
 				}
 
 				if (!bool_cutscene) {
-
-
+                  
+                    
 
 					if (is_pressed (settings.cont_moveup, float_mouse_wheel, false)) {
 						float_moveyaxis = float_moveyaxis + 1f;
