@@ -21,10 +21,10 @@ TagManager:
   - Menu
   - Background
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Cliff
+  - NPC
+  - HighObstacle
+  - LowObstacle
   - 
   - 
   - 

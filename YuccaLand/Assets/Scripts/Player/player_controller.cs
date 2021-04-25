@@ -94,20 +94,76 @@ public class player_controller : MonoBehaviour {
 		StartCoroutine (init_close_objective ());
 	}
 
+    public GameObject placeholder_projectile;
 
     private void FixedUpdate()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
-            Debug.Log("Casting ray");
-            Vector2 vectorUp = new Vector2(0, 1);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(vectorUp));
-            if (hit.collider != null)
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(vectorUp) * hit.distance, Color.yellow);
-                Debug.Log("Did Hit");
+            float eulerAngle = 0f;
+            if (float_standY < 0f) {
+                eulerAngle = 180f;
             }
+            else if (float_standX > 0f)
+            {
+                eulerAngle = 270f;
+            }
+            else if (float_standX < 0f)
+            {
+                eulerAngle = 90f;
+            }
+            GameObject bullet = Instantiate(placeholder_projectile, transform.position, Quaternion.Euler(new Vector3(0f, 0f, eulerAngle)));
+            bullet.GetComponent<projectile>().direction = new Vector2(float_standX, float_standY);
 
+            /*Vector2 vectorUp = new Vector2(float_standX, float_standY);
+            LayerMask detectedLayers = LayerMask.GetMask("Cliff") + LayerMask.GetMask("NPC") + LayerMask.GetMask("HighObstacle") + LayerMask.GetMask("LowObstacle");
+            //RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(vectorUp),100f);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.TransformDirection(vectorUp), 100f, detectedLayers);
+
+            string message = "Objects hit: " + hits.Length.ToString();
+
+            int hittableStatus = 100;
+            float distanceToCliff = 0f;
+            float distanceToNPC = 0f;
+
+            foreach (RaycastHit2D hit in hits)
+            {
+                message = message + ", D: " + hit.distance.ToString();
+                if (hit.transform.gameObject.layer == LayerMask.GetMask("NPC") && hittableStatus >= 100)
+                {
+                    hittableStatus = 200;
+                }
+                else if (hit.transform.gameObject.layer == LayerMask.GetMask("Cliff"))
+                {
+                    switch (hittableStatus)
+                    {
+                        //case 200://Sucess!
+                        //    break;
+                        case 100://Undecided
+                            distanceToCliff = hit.distance;
+                            hittableStatus = 0;
+                            break;
+                        case 0://Cliff
+                            hittableStatus = -100;
+                            break;
+                        //case -100://No way!
+                        default:
+                            break;
+                    }
+                }
+                else if (hit.transform.gameObject.layer == LayerMask.GetMask("HighObstacle"))
+                {
+                    hittableStatus = -100;
+                }
+                else if (hit.transform.gameObject.layer == LayerMask.GetMask("LowObstacle") && bool_crouching)
+                {
+                    hittableStatus = -100;
+                }
+            }
+            
+            
+
+            Debug.Log(message);*/
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class inventory : MonoBehaviour {
 
-	#region Singleton
+	
 
 	public delegate void on_item_changed();
 	public on_item_changed on_item_changed_call_back;
@@ -22,8 +22,8 @@ public class inventory : MonoBehaviour {
 
 	crafting_tables crafting;
 
-
-	void Awake () {
+    #region Singleton   
+    void Awake () {
 		if (instance != null) {
 			Debug.Log ("WARNING! More than one instance of inventory found!");
 			return;

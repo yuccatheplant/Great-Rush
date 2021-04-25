@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Player\Inventory\Weapon.cs" />
     <Compile Include="Assets\Scripts\Player\Inventory\weapon_picker.cs" />
     <Compile Include="Assets\Scripts\Player\player_controller.cs" />
+    <Compile Include="Assets\Scripts\Projectile\projectile.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Tutorial\cutscene01.cs" />
     <Compile Include="Assets\Scripts\Tutorial\gamemanager_tutorial.cs" />
