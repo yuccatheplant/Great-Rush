@@ -24,8 +24,9 @@ public class Settings : MonoBehaviour {
 	public string cont_selectguy = "F1";
 	public string cont_selectdoc = "F2";
 	public string cont_selecttribe = "F3";
+    public string cont_attack = "F";
 
-	public string cont_objective = "O";
+    public string cont_objective = "O";
 	public string cont_inventory = "E";
 	public string cont_drop = "Q";
 	public string cont_next = "ScrollDown";
